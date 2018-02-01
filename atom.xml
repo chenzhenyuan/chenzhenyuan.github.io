@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.chenzhenyuan.com/"/>
-  <updated>2018-02-01T07:48:18.222Z</updated>
+  <updated>2018-02-01T07:49:44.452Z</updated>
   <id>http://blog.chenzhenyuan.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://blog.chenzhenyuan.com/2017/02/02/%E6%B5%8B%E8%AF%95/"/>
     <id>http://blog.chenzhenyuan.com/2017/02/02/测试/</id>
     <published>2017-02-02T07:01:00.000Z</published>
-    <updated>2018-02-01T07:48:18.222Z</updated>
+    <updated>2018-02-01T07:49:44.452Z</updated>
     
     <content type="html"><![CDATA[<p>啊所发生的发是asdf</p><p>阿斯顿发送到发是</p>]]></content>
     
@@ -35,6 +35,8 @@
       
     
     </summary>
+    
+      <category term="转载" scheme="http://blog.chenzhenyuan.com/categories/%E8%BD%AC%E8%BD%BD/"/>
     
     
   </entry>
