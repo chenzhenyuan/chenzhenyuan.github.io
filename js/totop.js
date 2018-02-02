@@ -1,3 +1,3 @@
-// build time:Fri Feb 02 2018 10:48:41 GMT+0800 (CST)
+// build time:Fri Feb 02 2018 10:53:29 GMT+0800 (CST)
 $(window).scroll(function(){$(window).scrollTop()>500?$("#rocket").addClass("show"):$("#rocket").removeClass("show")});$("#rocket").click(function(){$("#rocket").addClass("launch");$("html, body").animate({scrollTop:0},500,function(){$("#rocket").removeClass("show launch")});return false});
 //rebuild by neat 
