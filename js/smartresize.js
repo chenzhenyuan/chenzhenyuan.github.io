@@ -1,3 +1,1 @@
-// build time:Mon Feb 05 2018 23:11:53 GMT+0800 (CST)
-+function(n,r){var t=function(n,r,t){var i;return function(){function e(){t||n.apply(u,a),i=null}var u=this,a=arguments;i?clearTimeout(i):t&&n.apply(u,a),i=setTimeout(e,r||100)}};jQuery.fn[r]=function(n){return n?this.bind("resize",t(n)):this.trigger(r)}}(jQuery,"smartresize");
-//rebuild by neat 
++function(n,r){var t=function(n,r,t){var i;return function(){function e(){t||n.apply(u,a),i=null}var u=this,a=arguments;i?clearTimeout(i):t&&n.apply(u,a),i=setTimeout(e,r||100)}};jQuery.fn[r]=function(n){return n?this.bind("resize",t(n)):this.trigger(r)}}(jQuery,"smartresize");// build time:Tue Feb 06 2018 02:58:58 GMT+0800 (CST)
