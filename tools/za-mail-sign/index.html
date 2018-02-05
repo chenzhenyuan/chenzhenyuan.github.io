@@ -7,7 +7,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>邮箱签名生成工具</title>
     <style>
-        body{padding-top:20px;background-color:#eee;width:1000px}.viewport{display:flex}.input-wrapper,.previewer-wrapper{flex:1}.form-item{vertical-align:middle;margin-bottom:5px}.form-item label{display:inline-block;width:100px;text-align:right}.form-item label::after{content:':';display:inline-block;margin-right:5px}.form-item label+input{width:230px;height:20px}#assets-bg{visibility:hidden;display:none}a{text-decoration:none;color:#555;border:1px solid #555;display:inline-flex;width:60px;height:27px;align-items:center;justify-content:center;border-radius:4px}a:hover{color:#000;border:1px solid #000}
+        body {
+            padding-top: 20px;
+            background-color: #eee;
+            width: 1000px
+        }
+
+        .viewport {
+            display: flex
+        }
+
+        .input-wrapper,
+        .previewer-wrapper {
+            flex: 1
+        }
+
+        .form-item {
+            vertical-align: middle;
+            margin-bottom: 5px
+        }
+
+        .form-item label {
+            display: inline-block;
+            width: 100px;
+            text-align: right
+        }
+
+        .form-item label::after {
+            content: ':';
+            display: inline-block;
+            margin-right: 5px
+        }
+
+        .form-item label+input {
+            width: 230px;
+            height: 20px
+        }
+
+        #assets-bg {
+            visibility: hidden;
+            display: none
+        }
+
+        a {
+            text-decoration: none;
+            color: #555;
+            border: 1px solid #555;
+            display: inline-flex;
+            width: 60px;
+            height: 27px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px
+        }
+
+        a:hover {
+            color: #000;
+            border: 1px solid #000
+        }
+
     </style>
 </head>
 
@@ -16,35 +74,43 @@
     <div class="viewport">
         <div class="input-wrapper" id="inputWrapper">
             <div class="form-item">
-                <label for="userName">姓名</label><input id="userName" type="text">
+                <label for="userName">姓名</label>
+                <input id="userName" type="text">
             </div>
 
             <div class="form-item">
-                <label for="userEnName">英文名</label><input id="userEnName" type="text">
+                <label for="userEnName">英文名</label>
+                <input id="userEnName" type="text">
             </div>
 
             <div class="form-item">
-                <label for="userDepartment">部门</label><input id="userDepartment" type="text">
+                <label for="userDepartment">部门</label>
+                <input id="userDepartment" type="text">
             </div>
 
             <div class="form-item">
-                <label for="userAddress">地址</label><input id="userAddress" type="text" placeholder="上海徐汇区虹漕路1001号光启大楼1801室">
+                <label for="userAddress">地址</label>
+                <input id="userAddress" type="text" placeholder="上海徐汇区虹漕路1001号光启大楼1801室">
             </div>
 
             <div class="form-item">
-                <label for="userPhone">手机</label><input id="userPhone" type="text">
+                <label for="userPhone">手机</label>
+                <input id="userPhone" type="text">
             </div>
 
             <div class="form-item">
-                <label for="userTel">电话</label><input id="userTel" type="text">
+                <label for="userTel">电话</label>
+                <input id="userTel" type="text">
             </div>
 
             <div class="form-item">
-                <label for="userSite">网址</label><input id="userSite" type="text" placeholder="http://www.zhongan.bio/">
+                <label for="userSite">网址</label>
+                <input id="userSite" type="text" placeholder="http://www.zhongan.bio/">
             </div>
 
             <div class="form-item">
-                <label for="userMail">邮箱</label><input id="userMail" type="text">
+                <label for="userMail">邮箱</label>
+                <input id="userMail" type="text">
             </div>
 
             <div style="text-align: center; margin-top: 30px;">
@@ -58,109 +124,147 @@
         </div>
     </div>
 
-    
 
-    
+
+
 
     <script type="text/javascript">
-    !(function() {
-        function $(s) {
-            return document.querySelector(s);
-        }
-        
-        class MailSign {
-            constructor(a) {
-                this.element = document.querySelector("#mainCanvas");
-                this.context = this.element.getContext("2d");
-
-                this.element.width = 658;
-                this.element.height = 318;
-
-                // this.context.textBaseline = 'alphabetic';
-                this.context.textBaseline = 'top';
-
-                this.setBackground();
-                this.drawDefault();
+        !(function () {
+            function $(s) {
+                return document.querySelector(s);
             }
 
-            setBackground() {
-                this.context.rect(0, 0, 658, 318);
-                this.context.fillStyle="#FFFFFF";
-                this.context.fill();
+            class MailSign {
+                constructor(a) {
+                    this.element = document.querySelector("#mainCanvas");
+                    this.context = this.element.getContext("2d");
+
+                    this.element.width = 658;
+                    this.element.height = 318;
+
+                    // this.context.textBaseline = 'alphabetic';
+                    this.context.textBaseline = 'top';
+
+                    this.setBackground();
+                    this.drawDefault();
+                }
+
+                setBackground() {
+                    this.context.rect(0, 0, 658, 318);
+                    this.context.fillStyle = "#FFFFFF";
+                    this.context.fill();
+                }
+
+                drawText(opt) {
+                    this.context.font = `${opt.fontSize || 11}px '微软雅黑'`;
+                    this.context.fillStyle = '#555555';
+                    this.context.fillText(opt.text, opt.x || 0, opt.y || 0);
+                }
+
+                // drawImage(opt) {
+                //     const self = this;
+                //     const beauty = new Image();
+                //     const context = this.context;
+                //     // beauty.setAttribute('crossOrigin', 'anonymous');
+                //     // beauty.setAttribute('crossOrigin', '*');
+                //     beauty.src = opt.src;
+                //     beauty.onload = function() {
+                //         context.drawImage(beauty, opt.offsetX || 0, opt.offsetY || 0);
+                //         self.drawInfo();
+                //     }
+                // }
+
+                drawImage(opt) {
+                    this.context.drawImage($('#assets-bg'), opt.offsetX || 0, opt.offsetY || 0);
+                    this.drawInfo();
+                }
+
+                drawDefault() {
+                    // this.drawImage({src: './assets/image.png', offsetX: 0, offsetY: 0, });
+
+                    const bgImage = $('#assets-bg').getAttribute('src');
+                    this.drawImage({
+                        src: bgImage,
+                        offsetX: 0,
+                        offsetY: 0,
+                    });
+                }
+
+                drawInfo() {
+                    const fontSize = 18;
+                    const fontSize2 = 15;
+
+                    const userName = $('#userName').value;
+                    const userEnName = $('#userEnName').value;
+                    const userDepartment = $('#userDepartment').value;
+                    const userAddress = $('#userAddress').value || '上海徐汇区虹漕路1001号光启大楼1801室';
+                    const userPhone = $('#userPhone').value;
+                    const userTel = $('#userTel').value;
+                    const userSite = $('#userSite').value || 'http://www.zhongan.bio/';
+                    const userMail = $('#userMail').value;
+
+                    this.drawText({
+                        text: userName,
+                        x: 5,
+                        y: 5,
+                        fontSize: fontSize
+                    });
+                    this.drawText({
+                        text: userEnName,
+                        x: userName.length * 20 + 10,
+                        y: 5,
+                        fontSize: fontSize - 2
+                    });
+                    this.drawText({
+                        text: userDepartment,
+                        x: 5,
+                        y: 33
+                    });
+                    this.drawText({
+                        text: userAddress,
+                        x: 35,
+                        y: 105
+                    });
+                    this.drawText({
+                        text: userTel,
+                        x: 35,
+                        y: 127
+                    });
+                    this.drawText({
+                        text: userPhone,
+                        x: 35,
+                        y: 153
+                    });
+                    this.drawText({
+                        text: userSite,
+                        x: 35,
+                        y: 175
+                    });
+                    this.drawText({
+                        text: userMail,
+                        x: 35,
+                        y: 195
+                    });
+                }
+
+                toDataURL() {
+                    return this.element.toDataURL("image/jpeg", 1).replace("image/jpeg", "image/octet-stream");
+                }
             }
 
-            drawText(opt) {
-                this.context.font = `${opt.fontSize || 11}px '微软雅黑'`;
-                this.context.fillStyle = '#555555';
-                this.context.fillText(opt.text, opt.x || 0, opt.y  || 0);
+            window.onload = function () {
+                let pt = new MailSign();
+                $('#creator').addEventListener('click', function () {
+                    pt = new MailSign(1);
+                }, false);
+                $('#downloader').addEventListener('click', function () {
+                    const username = $('#userName').value || "NONAME";
+                    pt = new MailSign(1);
+                    this.setAttribute('download', username + '.jpg');
+                    this.setAttribute('href', pt.toDataURL());
+                });
             }
-            
-            // drawImage(opt) {
-            //     const self = this;
-            //     const beauty = new Image();
-            //     const context = this.context;
-            //     // beauty.setAttribute('crossOrigin', 'anonymous');
-            //     // beauty.setAttribute('crossOrigin', '*');
-            //     beauty.src = opt.src;
-            //     beauty.onload = function() {
-            //         context.drawImage(beauty, opt.offsetX || 0, opt.offsetY || 0);
-            //         self.drawInfo();
-            //     }
-            // }
-
-            drawImage(opt) {
-                this.context.drawImage($('#assets-bg'), opt.offsetX || 0, opt.offsetY || 0);
-                this.drawInfo();
-            }
-
-            drawDefault() {
-                // this.drawImage({src: './assets/image.png', offsetX: 0, offsetY: 0, });
-                
-                const bgImage = $('#assets-bg').getAttribute('src');
-                this.drawImage({src: bgImage, offsetX: 0, offsetY: 0, });
-            }
-
-            drawInfo() {
-                const fontSize = 18;
-                const fontSize2= 15;
-
-                const userName = $('#userName').value;
-                const userEnName = $('#userEnName').value;
-                const userDepartment = $('#userDepartment').value;
-                const userAddress = $('#userAddress').value || '上海徐汇区虹漕路1001号光启大楼1801室';
-                const userPhone = $('#userPhone').value;
-                const userTel = $('#userTel').value;
-                const userSite = $('#userSite').value || 'http://www.zhongan.bio/';
-                const userMail = $('#userMail').value;
-
-                this.drawText({text: userName, x: 5, y: 5, fontSize: fontSize});
-                this.drawText({text: userEnName, x: userName.length * 20 + 10, y: 5, fontSize: fontSize - 2});
-                this.drawText({text: userDepartment, x: 5, y: 33});
-                this.drawText({text: userAddress,    x: 35, y: 105});
-                this.drawText({text: userTel,        x: 35, y: 127});
-                this.drawText({text: userPhone,      x: 35, y: 153});
-                this.drawText({text: userSite,       x: 35, y: 175});
-                this.drawText({text: userMail,       x: 35, y: 195});
-            }
-
-            toDataURL() {
-                return this.element.toDataURL("image/jpeg", 1).replace("image/jpeg", "image/octet-stream");
-            }
-        }
-
-        window.onload = function() {
-            let pt = new MailSign();
-            $('#creator').addEventListener('click', function() {
-                pt = new MailSign(1);
-            }, false);
-            $('#downloader').addEventListener('click', function() {
-                const username = $('#userName').value || "NONAME";
-                pt = new MailSign(1);
-                this.setAttribute('download', username + '.jpg');
-                this.setAttribute('href', pt.toDataURL());
-            });
-        }
-    }());
+        }());
 
     </script>
 </body>
