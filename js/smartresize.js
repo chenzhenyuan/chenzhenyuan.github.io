@@ -1,3 +1,3 @@
-// build time:Mon Feb 05 2018 22:09:34 GMT+0800 (CST)
-+function(i,e){var n=function(i,e,n){var r;return function t(){var t=this,u=arguments;function f(){if(!n){i.apply(t,u)}r=null}if(r){clearTimeout(r)}else if(n){i.apply(t,u)}r=setTimeout(f,e||100)}};jQuery.fn[e]=function(i){return i?this.bind("resize",n(i)):this.trigger(e)}}(jQuery,"smartresize");
+// build time:Mon Feb 05 2018 23:11:53 GMT+0800 (CST)
++function(n,r){var t=function(n,r,t){var i;return function(){function e(){t||n.apply(u,a),i=null}var u=this,a=arguments;i?clearTimeout(i):t&&n.apply(u,a),i=setTimeout(e,r||100)}};jQuery.fn[r]=function(n){return n?this.bind("resize",t(n)):this.trigger(r)}}(jQuery,"smartresize");
 //rebuild by neat 
