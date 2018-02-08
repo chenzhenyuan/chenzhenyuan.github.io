@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.chenzhenyuan.com/"/>
-  <updated>2018-02-05T19:34:38.000Z</updated>
+  <updated>2018-02-08T06:26:15.949Z</updated>
   <id>http://blog.chenzhenyuan.com/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>前端开发环境搭建整理</title>
-    <link href="http://blog.chenzhenyuan.com/2018/02/05/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%95%B4%E7%90%86/"/>
-    <id>http://blog.chenzhenyuan.com/2018/02/05/前端开发环境搭建整理/</id>
-    <published>2018-02-05T09:24:00.000Z</published>
-    <updated>2018-02-05T19:34:38.000Z</updated>
+    <title>前端开发环境搭建之Webpack的安装</title>
+    <link href="http://blog.chenzhenyuan.com/2018/02/08/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B9%8BWebpack%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+    <id>http://blog.chenzhenyuan.com/2018/02/08/前端开发环境搭建之Webpack的安装/</id>
+    <published>2018-02-08T06:26:15.000Z</published>
+    <updated>2018-02-08T06:26:15.949Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="一、安装NodeJS;">一、安装NodeJS<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>;</h4><p><a name="mac_os"></a><strong>Mac OS</strong><br>使用Homebrew<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>安装（<em>推荐</em>）：</p><ol><li><p>安装Homebrew；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure></li><li><p>安装NodeJS；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></li></ol><ul><li>使用安装包安装 | 下载地址：<a href="https://nodejs.org/dist/v8.9.4/node-v8.9.4.pkg" target="_blank" rel="noopener"><em>node-v8.9.4.pkg</em></a></li><li>Source Code 安装 <a href="#source_code_setup"><sup>[查看]</sup></a>;</li></ul><p><strong>Linux</strong></p><ul><li>使用编译好的文件 | <a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">前往</a></li><li><a name="source_code_setup"></a>Source Code 安装<ol><li><p><a href="https://nodejs.org/dist/v8.9.4/node-v8.9.4.tar.gz" target="_blank" rel="noopener">下载</a>Source Code 或 在 命令行中执行下面的命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://nodejs.org/dist/v8.9.4/node-v8.9.4.tar.gz</span><br></pre></td></tr></table></figure></li><li><p>执行下面的命令进行安装；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压压缩包</span></span><br><span class="line">tar -xzvf node-v8.9.4.tar.gz</span><br><span class="line"><span class="comment"># 进入解压得到的目录</span></span><br><span class="line"><span class="built_in">cd</span> node-v8.9.4</span><br><span class="line">./configure</span><br><span class="line"><span class="comment"># 这一步的时间会很长！</span></span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="comment"># 查看当前安装的Node的版本 </span></span><br><span class="line">node -v</span><br></pre></td></tr></table></figure></li></ol></li></ul><p><strong>Windows</strong> [略]</p><h4 id="二、安装常用工具">二、安装常用工具</h4><ul><li><p>Webpack</p><p>A. 全局安装<br><em>使用 yarn 安装：</em></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global webpack</span><br></pre></td></tr></table></figure><p><em>使用 npm 安装：</em></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global webpack</span><br></pre></td></tr></table></figure></li></ul><link href="/css/katex.min.css" rel="stylesheet"><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li class="footnote-item" id="fn1"><p>NodeJS官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li class="footnote-item" id="fn2"><p>Homebrew官网: <a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">https://brew.sh/index_zh-cn.html</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section><!-- build time:Thu Feb 08 2018 11:39:46 GMT+0800 (CST) -->]]></content>
+    <content type="html"><![CDATA[<link href="/css/katex.min.css" rel="stylesheet"><!-- build time:Thu Feb 08 2018 14:27:16 GMT+0800 (CST) -->]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link href=&quot;/css/katex.min.css&quot; rel=&quot;stylesheet&quot;&gt;&lt;!-- build time:Thu Feb 08 2018 14:27:16 GMT+0800 (CST) --&gt;
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>前端开发环境搭建之NodeJS的安装</title>
+    <link href="http://blog.chenzhenyuan.com/2017/07/05/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E4%B9%8BNodeJS%E7%9A%84%E5%AE%89%E8%A3%85/"/>
+    <id>http://blog.chenzhenyuan.com/2017/07/05/前端开发环境搭建之NodeJS的安装/</id>
+    <published>2017-07-05T09:24:00.000Z</published>
+    <updated>2018-02-08T06:24:38.649Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="一、安装NodeJS;">一、安装NodeJS<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>;</h4><p><a name="mac_os"></a><strong>Mac OS</strong><br>使用Homebrew<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>安装（<em>推荐</em>）：</p><ol><li><p>安装Homebrew；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br></pre></td></tr></table></figure></li><li><p>安装NodeJS；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure></li></ol><ul><li>使用安装包安装 | 下载地址：<a href="https://nodejs.org/dist/v8.9.4/node-v8.9.4.pkg" target="_blank" rel="noopener"><em>node-v8.9.4.pkg</em></a></li><li>Source Code 安装 <a href="#source_code_setup"><sup>[查看]</sup></a>;</li></ul><p><strong>Linux</strong></p><ul><li>使用编译好的文件 | <a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">下载</a></li><li><a name="source_code_setup"></a>Source Code 安装<ol><li><p><a href="https://nodejs.org/dist/v8.9.4/node-v8.9.4.tar.gz" target="_blank" rel="noopener">下载</a>Source Code 或 在 命令行中执行下面的命令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://nodejs.org/dist/v8.9.4/node-v8.9.4.tar.gz</span><br></pre></td></tr></table></figure></li><li><p>执行下面的命令进行安装；</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压压缩包</span></span><br><span class="line">tar -xzvf node-v8.9.4.tar.gz</span><br><span class="line"><span class="comment"># 进入解压得到的目录</span></span><br><span class="line"><span class="built_in">cd</span> node-v8.9.4</span><br><span class="line">./configure</span><br><span class="line"><span class="comment"># 这一步的时间会很长！</span></span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="comment"># 查看当前安装的Node的版本 </span></span><br><span class="line">node -v</span><br></pre></td></tr></table></figure></li></ol></li></ul><p><strong>Windows</strong> [略]</p><link href="/css/katex.min.css" rel="stylesheet"><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li class="footnote-item" id="fn1"><p>NodeJS官网：<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li><li class="footnote-item" id="fn2"><p>Homebrew官网: <a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">https://brew.sh/index_zh-cn.html</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p></li></ol></section><!-- build time:Thu Feb 08 2018 14:27:16 GMT+0800 (CST) -->]]></content>
     
     <summary type="html">
     
@@ -36,8 +57,14 @@
     
       <category term="笔记" scheme="http://blog.chenzhenyuan.com/categories/%E7%AC%94%E8%AE%B0/"/>
     
+      <category term="前端" scheme="http://blog.chenzhenyuan.com/categories/%E7%AC%94%E8%AE%B0/%E5%89%8D%E7%AB%AF/"/>
+    
     
       <category term="笔记" scheme="http://blog.chenzhenyuan.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Node" scheme="http://blog.chenzhenyuan.com/tags/Node/"/>
+    
+      <category term="前端" scheme="http://blog.chenzhenyuan.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
