@@ -1,5 +1,5 @@
 <html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="telephone=no" name="format-detection"/><meta name="description" content="技术博客"/><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/magula.min.css"/><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/7.0.0/normalize.min.css"/><link rel="stylesheet" type="text/css" href="/css/wiki.css?v=0.0.1"/></head><body class="wiki"><div class="wiki-content"><h1 class="wiki-title">Markdown 语法入门</h1><a id="more"></a>
-<p></p><h3>Table of Contents</h3><ul><li><a href="#_4">标准标记</a></li><ul><li><a href="#_5">标题</a></li><li><a href="#_Blockquotes_19">区块引用 Blockquotes</a></li><li><a href="#_29">绘制表格</a></li><li><a href="#_43">列表</a></li><ul><li><a href="#_45">无序列表</a></li><li><a href="#_49">有序列表</a></li><ul><li><a href="#2_51">有序列表2</a></li></ul></ul><li><a href="#_53">高亮一段代码</a></li></ul><li><a href="#_56">扩展标记</a></li><ul><li><a href="#_57">脚注</a></li><li><a href="#_64">制作一份待办事宜</a></li></ul></ul><p></p>
+<p></p><h3>Table of Contents</h3><ul><li><a href="#_4">标准标记</a></li><ul><li><a href="#_5">标题</a></li><li><a href="#_Blockquotes_19">区块引用 Blockquotes</a></li><li><a href="#_29">绘制表格</a></li><li><a href="#_43">列表</a></li><ul><li><a href="#_45">无序列表</a></li><li><a href="#_49">有序列表</a></li></ul><li><a href="#_51">高亮一段代码</a></li></ul><li><a href="#_54">扩展标记</a></li><ul><li><a href="#_55">脚注</a></li><li><a href="#_62">制作一份待办事宜</a></li></ul></ul><p></p>
 <h1><a id="_4"></a>标准标记</h1>
 <h2><a id="_5"></a>标题</h2>
 <p>Markdown 支持两种标题的语法，类 <a href="http://docutils.sourceforge.net/mirror/setext.html" target="_blank" rel="noopener">Setext</a> 和类 <a href="http://www.aaronsw.com/2002/atx/" target="_blank" rel="noopener">atx</a> 形式。</p>
@@ -56,14 +56,13 @@ id sem consectetuer libero luctus adipiscing.</p>
 <p>无序列表使用星号、加号或是减号作为列表标记：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*   Red</span><br><span class="line">*   Green</span><br><span class="line">*   Blue</span><br></pre></td></tr></table></figure>
 <h3><a id="_49"></a>有序列表</h3>
-<h4><a id="2_51"></a>有序列表2</h4>
-<h2><a id="_53"></a>高亮一段代码</h2>
+<h2><a id="_51"></a>高亮一段代码</h2>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@requires_authorization</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SomeClass</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># A comment</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">'hello world'</span></span><br></pre></td></tr></table></figure>
-<h1><a id="_56"></a>扩展标记</h1>
-<h2><a id="_57"></a>脚注</h2>
+<h1><a id="_54"></a>扩展标记</h1>
+<h2><a id="_55"></a>脚注</h2>
 <p>使用方法：</p>
 <p>$$E=mc^2$$</p>
-<h2><a id="_64"></a>制作一份待办事宜</h2>
+<h2><a id="_62"></a>制作一份待办事宜</h2>
 <ul>
 <li><input type="checkbox" id="checkbox0"><label for="checkbox0">支持以 PDF 格式导出文稿</label></li>
 <li><input type="checkbox" id="checkbox1"><label for="checkbox1">改进 Cmd 渲染算法，使用局部渲染技术提高渲染效率</label></li>
