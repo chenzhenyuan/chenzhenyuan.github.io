@@ -26,11 +26,11 @@
     </item>
     
     <item>
-      <title>Hire Me</title>
-      <link>https://chenzhenyuan.com/hireme/</link>
+      <title>Hires</title>
+      <link>https://chenzhenyuan.com/hires/me/</link>
       <pubDate>Sun, 20 Aug 2017 21:38:52 +0800</pubDate>
       
-      <guid>https://chenzhenyuan.com/hireme/</guid>
+      <guid>https://chenzhenyuan.com/hires/me/</guid>
       <description>Hugo is a static site engine written in Go.
 It makes use of a variety of open source projects including:
  Cobra Viper J Walter Weatherman Cast  Learn more and contribute on GitHub.</description>
