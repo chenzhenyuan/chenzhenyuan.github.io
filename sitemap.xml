@@ -16,6 +16,13 @@
   </url>
   
   <url>
+    <loc>https://chenzhenyuan.com/hireme/</loc>
+    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://chenzhenyuan.com/categories/</loc>
     <lastmod>2018-11-05T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -149,7 +156,21 @@
   </url>
   
   <url>
+    <loc>https://chenzhenyuan.com/artical/sss/</loc>
+    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://chenzhenyuan.com/post/chinese-preview/</loc>
+    <lastmod>2017-08-30T01:37:56+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://chenzhenyuan.com/artical/</loc>
     <lastmod>2017-08-30T01:37:56+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
