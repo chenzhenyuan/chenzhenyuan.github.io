@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tag-2 on CHEN·ZHENYUAN - 小博客</title>
-    <link>https://chenzhenyuan.com/tags/tag-2/</link>
-    <description>Recent content in tag-2 on CHEN·ZHENYUAN - 小博客</description>
+    <title>tag-2 on Hugo Bootstrap</title>
+    <link>/tags/tag-2/</link>
+    <description>Recent content in tag-2 on Hugo Bootstrap</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Thu, 31 Aug 2017 15:43:48 +0800</lastBuildDate><atom:link href="https://chenzhenyuan.com/tags/tag-2/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Copyright © 2018-{year} CHEN·ZHENYUAN. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 31 Aug 2017 15:43:48 +0800</lastBuildDate><atom:link href="/tags/tag-2/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[English] Creating a New Theme</title>
-      <link>https://chenzhenyuan.com/post/english-preview/</link>
+      <link>/documents/english-preview/</link>
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
       
-      <guid>https://chenzhenyuan.com/post/english-preview/</guid>
+      <guid>/documents/english-preview/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>[English] Creating a New Theme</title>
+      <link>/posts/english-preview/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>/posts/english-preview/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>a11</title>
+      <link>/posts/a1/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>/posts/a1/</guid>
+      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
+We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
+    </item>
+    
+    <item>
+      <title>b111</title>
+      <link>/documents/a1/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
+      
+      <guid>/documents/a1/</guid>
       <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
 We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
