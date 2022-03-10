@@ -5,20 +5,43 @@
     <loc>/hire/me/</loc>
     <lastmod>2017-08-28T21:41:52+08:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
-    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
-  </url><url>
-    <loc>/index.html</loc>
+    <loc>/</loc>
+    <lastmod>2022-03-10T16:57:00+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="/fr/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-tw"
-                href="/zh-tw/index.html"
+                href="/zh-tw/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="/index.html"
+                href="/"
                 />
+  </url><url>
+    <loc>/documents/%E6%88%91%E7%9A%84%E6%96%87%E6%A1%A3%E7%A4%BA%E4%BE%8B/</loc>
+    <lastmod>2022-03-10T16:57:00+08:00</lastmod>
+  </url><url>
+    <loc>/documents/</loc>
+    <lastmod>2022-03-10T16:57:00+08:00</lastmod>
+  </url><url>
+    <loc>/posts/2018-03-10/hugo_building_note.html/</loc>
+    <lastmod>2018-03-10T16:29:36+08:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2018-03-10T16:29:36+08:00</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
   </url><url>
     <loc>/series/</loc>
     <xhtml:link
@@ -64,28 +87,6 @@
                 href="/tags/"
                 />
   </url><url>
-    <loc>/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="/zh-tw/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/"
-                />
-  </url><url>
     <loc>/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -111,9 +112,5 @@
     <loc>/photos/</loc>
   </url><url>
     <loc>/archives/</loc>
-  </url><url>
-    <loc>/documents/</loc>
-  </url><url>
-    <loc>/posts/</loc>
   </url>
 </urlset>

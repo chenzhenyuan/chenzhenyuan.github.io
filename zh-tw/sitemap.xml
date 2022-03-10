@@ -24,18 +24,6 @@
                 href="/zh-tw/categories/"
                 />
   </url><url>
-    <loc>/zh-tw/index.html</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="/index.html"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-tw"
-                href="/zh-tw/index.html"
-                />
-  </url><url>
     <loc>/zh-tw/series/</loc>
     <xhtml:link
                 rel="alternate"
