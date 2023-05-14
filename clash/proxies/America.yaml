@@ -1,0 +1,45 @@
+proxies:
+  - name: "🇺🇲 美国 | V1 | 01"
+    type: vmess
+    server: bcr.ueves.com
+    port: 11503
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇺🇲 美国 | V1 | 02"
+    type: vmess
+    server: bcr.ueves.com
+    port: 11502
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇺🇲 美国 | V1 | 03"
+    type: vmess
+    server: aev.ueves.com
+    port: 2501
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇺🇲 美国 | V1 | 04"
+    type: vmess
+    server: aev.ueves.com
+    port: 11501
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇺🇲 美国 | V2 | 05"
+    type: vmess
+    ws-opts:
+      path: "/shirker"
+      headers:
+        host: lv1.sharecentrepro.org
+    server: cf-lt.sharecentre.online
+    port: "80"
+    uuid: 2d5d8b9c-8ec4-4a37-b610-78e71e13eaef
+    alterId: "0"
+    cipher: auto
+    network: ws

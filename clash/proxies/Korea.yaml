@@ -1,0 +1,17 @@
+proxies:
+  - name: "🇰🇷 韩国 | V1 | 01"
+    type: vmess
+    server: co.oyvyt.com
+    port: 11401
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇰🇷 韩国 | V1 | 02"
+    type: vmess
+    server: bg.oyvyt.com
+    port: 1402
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true

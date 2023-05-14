@@ -1,0 +1,65 @@
+proxies:
+  - name: "🇸🇬 新加坡 | V2 | 01"
+    type: vmess
+    server: ovo.swvwg.com
+    port: 33207
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇸🇬 新加坡 | V2 | 02"
+    type: vmess
+    server: ovo.swvwg.com
+    port: 37113
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇸🇬 新加坡 | V1 | 01"
+    type: vmess
+    server: xyz.swvwg.com
+    port: 11205
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇸🇬 新加坡 | V1 | 02"
+    type: vmess
+    server: xyz.swvwg.com
+    port: 11206
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇸🇬 新加坡 | V1 | 03"
+    type: vmess
+    server: xyz.swvwg.com
+    port: 2201
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇸🇬 新加坡 | V1 | 04"
+    type: vmess
+    server: xyz.swvwg.com
+    port: 3201
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇸🇬 试用 | 新加坡 | 01 | 限 20 Mbs"
+    type: vmess
+    server: bcr.ueves.com
+    port: 10001
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇸🇬 试用 | 新加坡 | 02 | 限 20 Mbs"
+    type: vmess
+    server: bcr.ueves.com
+    port: 10004
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
