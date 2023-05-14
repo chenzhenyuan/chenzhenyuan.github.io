@@ -15,42 +15,10 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  - name: "🇨🇦 加拿大 | V1 | 01"
-    type: vmess
-    server: bg.oyvyt.com
-    port: 48312
-    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
-    alterId: 0
-    cipher: auto
-    udp: true
-  - name: "🇦🇺 澳大利亚 | V1 | 01"
-    type: vmess
-    server: bg.oyvyt.com
-    port: 37111
-    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
-    alterId: 0
-    cipher: auto
-    udp: true
-  - name: "🇵🇰 巴基斯坦 | V1 | 01"
-    type: vmess
-    server: bg.oyvyt.com
-    port: 37115
-    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
-    alterId: 0
-    cipher: auto
-    udp: true
-  - name: "🇨🇱 智利  | V1 | 01"
+  - name: "🇨🇱 智利 | V1 | 01"
     type: vmess
     server: bg.oyvyt.com
     port: 37143
-    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
-    alterId: 0
-    cipher: auto
-    udp: true
-  - name: "🇹🇷 土耳其 | V1 | 01"
-    type: vmess
-    server: bg.oyvyt.com
-    port: 11905
     uuid: a1c600da-1ea4-323b-81ae-e8210317708f
     alterId: 0
     cipher: auto
@@ -59,6 +27,30 @@ proxies:
     type: vmess
     server: bg.oyvyt.com
     port: 11902
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇮🇳 印度 | V1 | 01"
+    type: vmess
+    server: bg.oyvyt.com
+    port: 11901
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇹🇭 泰国 | V1 | 01"
+    type: vmess
+    server: bg.oyvyt.com
+    port: 11906
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇹🇷 土耳其 | V1 | 01"
+    type: vmess
+    server: bg.oyvyt.com
+    port: 11905
     uuid: a1c600da-1ea4-323b-81ae-e8210317708f
     alterId: 0
     cipher: auto
@@ -87,18 +79,26 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  - name: "🇮🇳 印度 | V1 | 01"
+  - name: "🇨🇦 加拿大 | V1 | 01"
     type: vmess
     server: bg.oyvyt.com
-    port: 11901
+    port: 48312
     uuid: a1c600da-1ea4-323b-81ae-e8210317708f
     alterId: 0
     cipher: auto
     udp: true
-  - name: "🇹🇭 泰国 | V1 | 01"
+  - name: "🇦🇺 澳大利亚 | V1 | 01"
     type: vmess
     server: bg.oyvyt.com
-    port: 11906
+    port: 37111
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇵🇰 巴基斯坦 | V1 | 01"
+    type: vmess
+    server: bg.oyvyt.com
+    port: 37115
     uuid: a1c600da-1ea4-323b-81ae-e8210317708f
     alterId: 0
     cipher: auto
