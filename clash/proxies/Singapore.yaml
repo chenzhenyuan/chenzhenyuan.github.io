@@ -47,7 +47,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  - name: "🇸🇬 试用 | 新加坡 | 01 | 限 20 Mbs"
+  - name: "🇸🇬 新加坡 | T0 | 01 | 限 20 Mbs"
     type: vmess
     server: bcr.ueves.com
     port: 10001
@@ -55,7 +55,7 @@ proxies:
     alterId: 0
     cipher: auto
     udp: true
-  - name: "🇸🇬 试用 | 新加坡 | 02 | 限 20 Mbs"
+  - name: "🇸🇬 新加坡 | T0 | 02 | 限 20 Mbs"
     type: vmess
     server: bcr.ueves.com
     port: 10004
