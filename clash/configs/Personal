@@ -206,32 +206,23 @@ proxy-providers:
       interval: 300
 
 rule-providers:
-  # 苹果服务
+  AdBlock:
+    type: http
+    behavior: classical
+    url: https://raw.iqiq.io/Semporia/Clash/master/Rule/AdBlock.yaml
+    path: ./ruleset/Semporia/Clash/AdBlock.yaml
+    interval: 3600
   Apple:
     type: http
-    behavior: domain
+    behavior: classical
     url: https://chenzhenyuan.com/clash/rules/apple.yaml
     path: ./ruleset/chenzhenyuan/apple.yaml
     interval: 3600
-  # 常用进程名
   Applications:
     type: http
     behavior: classical
     url: https://chenzhenyuan.com/clash/rules/applications.yaml
     path: ./ruleset/chenzhenyuan/applications.yaml
-    interval: 3600
-  # 广告商
-  BanAD:
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanAD.yaml
-    path: ./ruleset/ACL4SSR/ACL4SSR/BanAD.yaml
-    interval: 3600
-  BanEasyList:
-    type: http
-    behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/BanEasyList.yaml
-    path: ./ruleset/ACL4SSR/ACL4SSR/BanEasyList.yaml
     interval: 3600
   ChinaDomain:
     type: http
@@ -239,47 +230,53 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaDomain.yaml
     path: ./ruleset/ACL4SSR/ACL4SSR/ChinaDomain.yaml
     interval: 3600
-  # GitHub
   GitHub:
     type: http
     behavior: classical
     url: https://chenzhenyuan.com/clash/rules/github.yaml
     path: ./ruleset/chenzhenyuan/github.yaml
     interval: 3600
-  # Google
   Google:
     type: http
-    behavior: domain
-    url: https://chenzhenyuan.com/clash/rules/google.yaml
+    behavior: classical
+    url: https://raw.iqiq.io/Semporia/Clash/master/Rule/Google.yaml
     path: ./ruleset/chenzhenyuan/google.yaml
     interval: 3600
-  # 局域网
   LocalAreaNetwork:
     type: http
     behavior: classical
     url: https://chenzhenyuan.com/clash/rules/lan.yaml
     path: ./ruleset/chenzhenyuan/lan.yaml
     interval: 86400
-  # # GFWlist
   GFW:
     type: http
     behavior: domain
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
     path: ./ruleset/Loyalsoldier/clash-rules/ProxyGFWlist.yaml
     interval: 3600
-  # Telegram
   Telegram:
     type: http
     behavior: domain
     url: https://chenzhenyuan.com/clash/rules/telegram.yaml
     path: ./ruleset/chenzhenyuan/telegram.yaml
     interval: 3600
-  # Twitter
+  Tencent:
+    type: http
+    behavior: classical
+    url: https://chenzhenyuan.com/clash/rules/tencent.yaml
+    path: ./ruleset/chenzhenyuan/tencent.yaml
+    interval: 3600
   Twitter:
     type: http
     behavior: classical
     url: https://chenzhenyuan.com/clash/rules/twitter.yaml
     path: ./ruleset/chenzhenyuan/twitter.yaml
+    interval: 3600
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.iqiq.io/Semporia/Clash/master/Rule/YouTube.yaml
+    path: ./ruleset/Semporia/Clash/YouTube.yaml
     interval: 3600
 
 proxy-groups:
@@ -288,7 +285,7 @@ proxy-groups:
     type: select
     proxies:
       - 全球负载
-      - 集群线路
+      # - 集群线路
       - 香港负载
       - 台湾负载
       - 新加坡负载
@@ -302,75 +299,75 @@ proxy-groups:
     url: "http://www.gstatic.com/generate_204"
     interval: 180
     lazy: false
-    proxies:
-      - 香港负载
-      - 台湾负载
-      - 新加坡负载
-      - 美国负载
-      - 日本负载
-      - 韩国负载
-      - 其他负载
-  - name: 集群线路
-    type: select
-    proxies:
-      - 香港集群
-      - 台湾集群
-      - 新加坡集群
-      - 日本集群
-      - 韩国集群
-      - 美国集群
-      - 其他集群
-
-  # ============================================================================
-  - name: 香港集群
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
     use:
       - 香港机房
-  - name: 台湾集群
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
-    use:
       - 台湾机房
-  - name: 新加坡集群
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
-    use:
       - 新加坡机房
-  - name: 日本集群
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
-    use:
-      - 日本机房
-  - name: 韩国集群
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
-    use:
-      - 韩国机房
-  - name: 美国集群
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
-    use:
       - 美国机房
-  - name: 其他集群
-    type: url-test
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
-    use:
+      - 日本机房
+      - 韩国机房
       - 其他机房
+
+  # - name: 集群线路
+  #   type: select
+  #   proxies:
+  #     - 香港集群
+  #     - 台湾集群
+  #     - 新加坡集群
+  #     - 日本集群
+  #     - 韩国集群
+  #     - 美国集群
+  #     - 其他集群
+  # # ============================================================================
+  # - name: 香港集群
+  #   type: url-test
+  #   url: "http://www.gstatic.com/generate_204"
+  #   interval: 300
+  #   lazy: false
+  #   use:
+  #     - 香港机房
+  # - name: 台湾集群
+  #   type: url-test
+  #   url: "http://www.gstatic.com/generate_204"
+  #   interval: 300
+  #   lazy: false
+  #   use:
+  #     - 台湾机房
+  # - name: 新加坡集群
+  #   type: url-test
+  #   url: "http://www.gstatic.com/generate_204"
+  #   interval: 300
+  #   lazy: false
+  #   use:
+  #     - 新加坡机房
+  # - name: 日本集群
+  #   type: url-test
+  #   url: "http://www.gstatic.com/generate_204"
+  #   interval: 300
+  #   lazy: false
+  #   use:
+  #     - 日本机房
+  # - name: 韩国集群
+  #   type: url-test
+  #   url: "http://www.gstatic.com/generate_204"
+  #   interval: 300
+  #   lazy: false
+  #   use:
+  #     - 韩国机房
+  # - name: 美国集群
+  #   type: url-test
+  #   url: "http://www.gstatic.com/generate_204"
+  #   interval: 300
+  #   lazy: false
+  #   use:
+  #     - 美国机房
+  # - name: 其他集群
+  #   type: url-test
+  #   url: "http://www.gstatic.com/generate_204"
+  #   interval: 300
+  #   lazy: false
+  #   use:
+  #     - 其他机房
 
   # ============================================================================
   - name: 香港负载
@@ -425,7 +422,7 @@ proxy-groups:
 
 rules:
   # ============================================================================
-  # 私人域名 相关的规则
+  # 私人定制
   # ----------------------------------------------------------------------------
   - DOMAIN-SUFFIX,chenzhenyuan.com,DIRECT
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
@@ -440,6 +437,7 @@ rules:
   - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
   - DOMAIN-SUFFIX,local,DIRECT,no-resolve
   - DOMAIN,jayne-mini.local,DIRECT,no-resolve
+  - DOMAIN-KEYWORD,logitech,DIRECT,no-resolve
 
   # ============================================================================
   # 常见广告域名屏蔽
@@ -473,20 +471,28 @@ rules:
   - DOMAIN-KEYWORD,usage,REJECT
   - DOMAIN-KEYWORD,wlmonitor,REJECT
   - DOMAIN-KEYWORD,zjtoolbar,REJECT
-  - RULE-SET,BanAD,REJECT
-  - RULE-SET,BanEasyList,REJECT
+  - RULE-SET,AdBlock,REJECT
+
+  # ============================================================================
+  # 直连规则
+  # ----------------------------------------------------------------------------
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
 
   # ============================================================================
   # 规则集
   # ----------------------------------------------------------------------------
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,Apple,DIRECT
+  - RULE-SET,Tencent,DIRECT
+  
   - RULE-SET,ChinaDomain,DIRECT
-  - RULE-SET,GitHub,香港集群
-  - RULE-SET,Google,香港集群
+  
+  - RULE-SET,GitHub,默认线路
+  - RULE-SET,Google,美国负载
   - RULE-SET,Telegram,台湾负载
   - RULE-SET,Twitter,台湾负载
-  # - RULE-SET,ProxyGFWlist,默认线路
+  - RULE-SET,YouTube,美国负载
 
   # 进程名
   - PROCESS-NAME,BitTorrent Web,DIRECT
@@ -497,8 +503,6 @@ rules:
   # ============================================================================
   # IP 规则
   # ----------------------------------------------------------------------------
-  - DOMAIN-SUFFIX,cn,DIRECT
-  - DOMAIN-KEYWORD,-cn,DIRECT
   - IP-CIDR6,2001:67c:4e8::/48,默认线路,no-resolve
   - IP-CIDR6,2001:b28:f23d::/48,默认线路,no-resolve
   - IP-CIDR6,2001:b28:f23f::/48,默认线路,no-resolve
