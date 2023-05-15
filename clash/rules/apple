@@ -137,7 +137,6 @@ payload:
   - "+.www.apple.com.edgekey.net"
   - "+.www.apple.com"
   - "+.xp.apple.com"
-
   # iCloud
   - "+.www-cdn.icloud.com.akadns.net"
   - "+.applemx-icloud.com"
