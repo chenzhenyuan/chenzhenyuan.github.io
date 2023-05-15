@@ -7,30 +7,29 @@
 # ------------------------------------------------------------------------------
 # 🇲🇴 🇨🇳
 
-mixed-port: 51300
-socks-port: 51301
 redir-port: 51366
+# 混合代理端口
+mixed-port: 51300
+# Socks5 代理端口
+socks-port: 51301
+# HTTP 代理端口
 port: 51302
-
-# clash 的 RESTful APIc
-external-controller: "127.0.0.1:51399"
-
-# 规则模式：Rule（规则） / Global（全局代理）/ Direct（全局直连）
+# RESTful API for clash
+external-controller: "127.0.0.1:51377"
+# 规则模式: rule (规则) / global (全局代理) / direct (全局直连)
 mode: rule
-
 # 设置日志输出级别 (默认级别：silent，即不输出任何内容，以避免因日志内容过大而导致程序内存溢出）。
 # 5 个级别: silent / info / warning / error / debug。级别越高日志输出量越大，越倾向于调试，若需要请自行开启。
 log-level: error
-
 # RESTful API secret
 secret: "p0o9i8u7"
-
 # 允许局域网的连接（可用来共享代理）
-allow-lan: false
-# 此功能仅在 allow-lan 设置为 true 时生效，支持三种参数：
-# "*"                           绑定所有的 IP 地址
-# 192.168.122.11                绑定一个 IPv4 地址
-# "[aaaa::a8aa:ff:fe09:57d8]"   绑定一个 IPv6 地址
+allow-lan: true
+
+# # ==> 此功能仅在 allow-lan 设置为 true 时生效，支持三种参数：
+# # ==> "*"                           绑定所有的 IP 地址
+# # ==> 192.168.122.11                绑定一个 IPv4 地址
+# # ==> "[aaaa::a8aa:ff:fe09:57d8]"   绑定一个 IPv6 地址
 # bind-address: "*"
 # bind-address: "172.28.12.169"
 
@@ -84,61 +83,22 @@ dns:
     - "jsdelivr.net"
     - "raw.gitmirror.com"
     - "*.jsdelivr.net"
-
   default-nameserver:
-    # DNSPod
-    - 119.29.29.29
-    - 119.28.28.28
-    # 阿里云DNS
     - 223.5.5.5
-    # 114DNS
-    - 114.114.114.114
-
+    - 119.29.29.29
   nameserver:
-    - https://doh.pub/dns-query
-    # 阿里云 DoH DNS
-    - https://dns.alidns.com/dns-query
-    # DNSPod
-    - 119.29.29.29
-    # 阿里云DNS
-    - 223.5.5.5
-    # ONE DNS拦截版 恶意网站拦截、广告过滤
-    - 117.50.11.11
-    # ONE DNS纯净版 直接返回其真实的响应结果
-    - 117.50.10.10
-    # 114DNS
-    - 114.114.114.114
-
-  nameserver-policy:
-    # 私人域名
-    "chenzhenyuan.com": 119.29.29.29
-    "*.chenzhenyuan.com": 119.29.29.29
-    "jsdelivr.net": 119.29.29.29
-    "*.jsdelivr.net": 119.29.29.29
-
+    - "https://doh.pub/dns-query"
+    - "https://dns.alidns.com/dns-query"
   fallback:
-    - https://doh.dns.sb/dns-query
-    # Google
-    - tls://8.8.4.4:853
-    - tls://dns.google:853
-    - https://dns.google/dns-query
-    # Cloudflare DNS
-    - tls://1.0.0.1:853
-    - https://dns.cloudflare.com/dns-query
-    - https://cloudflare-dns.com/dns-query
-    # - 1.1.1.1
-    - tls://dns.rubyfish.cn:853
-    # - https://dns.rubyfish.cn/dns-query
-
+    - "https://doh.dns.sb/dns-query"
+    - "https://dns.cloudflare.com/dns-query"
+    - "https://dns.twnic.tw/dns-query"
+    - "tls://8.8.4.4:853"
   fallback-filter:
-    # 默认
     geoip: true
-    # domain:
-    # 在这个网段内的 IP 地址会被考虑为被污染的 IP
     ipcidr:
-      # - 0.0.0.0/32
       - 240.0.0.0/4
-
+      - 0.0.0.0/32
 proxy-providers:
   香港机房:
     type: http
@@ -205,6 +165,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
+# <classical | domain>
 rule-providers:
   AdBlock:
     type: http
@@ -215,8 +176,9 @@ rule-providers:
   Apple:
     type: http
     behavior: classical
-    url: https://chenzhenyuan.com/clash/rules/apple.yaml
-    path: ./ruleset/chenzhenyuan/apple.yaml
+    # url: https://chenzhenyuan.com/clash/rules/apple.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/rules/apple.yaml
+    path: ./ruleset/JAYNE0110/clashx/apple.yaml
     interval: 3600
   Applications:
     type: http
@@ -254,11 +216,19 @@ rule-providers:
     url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
     path: ./ruleset/Loyalsoldier/clash-rules/ProxyGFWlist.yaml
     interval: 3600
+  OverseasIP:
+    type: http
+    behavior: classical
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/rules/overseas-ip
+    path: ./ruleset/JAYNE0110/clashx/overseas-ip.yaml
+    format: yaml
+    interval: 3600
   Telegram:
     type: http
-    behavior: domain
-    url: https://chenzhenyuan.com/clash/rules/telegram.yaml
-    path: ./ruleset/chenzhenyuan/telegram.yaml
+    behavior: classical
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/rules/telegram
+    path: ./ruleset/JAYNE0110/clashx/telegram.yaml
+    format: yaml
     interval: 3600
   Tencent:
     type: http
@@ -285,135 +255,73 @@ proxy-groups:
     type: select
     proxies:
       - 全球负载
-      # - 集群线路
-      - 香港负载
-      - 台湾负载
-      - 新加坡负载
-      - 美国负载
-      - 日本负载
-      - 韩国负载
-      - 其他负载
+      - 香港集群
+      - 台湾集群
+      - 新加坡集群
+      - 日本集群
+      - 韩国集群
+      - 美国集群
+      - 其他集群
 
   - name: 全球负载
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 180
     lazy: false
-    use:
-      - 香港机房
-      - 台湾机房
-      - 新加坡机房
-      - 美国机房
-      - 日本机房
-      - 韩国机房
-      - 其他机房
-
-  # - name: 集群线路
-  #   type: select
-  #   proxies:
-  #     - 香港集群
-  #     - 台湾集群
-  #     - 新加坡集群
-  #     - 日本集群
-  #     - 韩国集群
-  #     - 美国集群
-  #     - 其他集群
-  # # ============================================================================
-  # - name: 香港集群
-  #   type: url-test
-  #   url: "http://www.gstatic.com/generate_204"
-  #   interval: 300
-  #   lazy: false
-  #   use:
-  #     - 香港机房
-  # - name: 台湾集群
-  #   type: url-test
-  #   url: "http://www.gstatic.com/generate_204"
-  #   interval: 300
-  #   lazy: false
-  #   use:
-  #     - 台湾机房
-  # - name: 新加坡集群
-  #   type: url-test
-  #   url: "http://www.gstatic.com/generate_204"
-  #   interval: 300
-  #   lazy: false
-  #   use:
-  #     - 新加坡机房
-  # - name: 日本集群
-  #   type: url-test
-  #   url: "http://www.gstatic.com/generate_204"
-  #   interval: 300
-  #   lazy: false
-  #   use:
-  #     - 日本机房
-  # - name: 韩国集群
-  #   type: url-test
-  #   url: "http://www.gstatic.com/generate_204"
-  #   interval: 300
-  #   lazy: false
-  #   use:
-  #     - 韩国机房
-  # - name: 美国集群
-  #   type: url-test
-  #   url: "http://www.gstatic.com/generate_204"
-  #   interval: 300
-  #   lazy: false
-  #   use:
-  #     - 美国机房
-  # - name: 其他集群
-  #   type: url-test
-  #   url: "http://www.gstatic.com/generate_204"
-  #   interval: 300
-  #   lazy: false
-  #   use:
-  #     - 其他机房
+    proxies:
+      - 香港集群
+      - 台湾集群
+      - 新加坡集群
+      - 日本集群
+      - 韩国集群
+      - 美国集群
+      - 其他集群
 
   # ============================================================================
-  - name: 香港负载
-    type: load-balance
+  - name: 香港集群
+    type: url-test
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 香港机房
-  - name: 台湾负载
-    type: load-balance
+  - name: 台湾集群
+    type: url-test
     url: "http://www.gstatic.com/generate_204"
-    interval: 10
+    interval: 300
     lazy: false
     use:
       - 台湾机房
-  - name: 新加坡负载
-    type: load-balance
+  - name: 新加坡集群
+    type: url-test
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 新加坡机房
-  - name: 美国负载
-    type: load-balance
-    url: "http://www.gstatic.com/generate_204"
-    interval: 300
-    lazy: false
-    use:
-      - 美国机房
-  - name: 日本负载
-    type: load-balance
+  - name: 日本集群
+    type: url-test
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 日本机房
-  - name: 韩国负载
-    type: load-balance
+  - name: 韩国集群
+    type: url-test
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 韩国机房
-  - name: 其他负载
-    type: load-balance
+  - name: 美国集群
+    type: url-test
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+    lazy: false
+    use:
+      - 美国机房
+  - name: 其他集群
+    type: url-test
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
@@ -424,20 +332,22 @@ rules:
   # ============================================================================
   # 私人定制
   # ----------------------------------------------------------------------------
+  - DOMAIN,jayne-mini.local,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,local,DIRECT,no-resolve
   - DOMAIN-SUFFIX,chenzhenyuan.com,DIRECT
-  - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
-  - DOMAIN,raw.gitmirror.com,DIRECT,no-resolve
-  - DOMAIN,raw.iqiq.io,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,sketch.cloud,DIRECT
 
+  - DOMAIN,raw.gitmirror.com,DIRECT,no-resolve
+  - DOMAIN,raw.iqiq.io,DIRECT
+  - DOMAIN-SUFFIX,sketch.cloud,DIRECT
+  - DOMAIN-KEYWORD,logitech,DIRECT,no-resolve
+
+  - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   # ============================================================================
   # IP测试 相关的规则
   # ----------------------------------------------------------------------------
   - DOMAIN,ip.900cha.com,DIRECT,no-resolve
+  - DOMAIN,ip111.cn,DIRECT,no-resolve
   - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,local,DIRECT,no-resolve
-  - DOMAIN,jayne-mini.local,DIRECT,no-resolve
-  - DOMAIN-KEYWORD,logitech,DIRECT,no-resolve
 
   # ============================================================================
   # 常见广告域名屏蔽
@@ -476,6 +386,9 @@ rules:
   # ============================================================================
   # 直连规则
   # ----------------------------------------------------------------------------
+  - DOMAIN,api.faviconkit.com,DIRECT,no-resolve
+  - DOMAIN,s.deepl.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-KEYWORD,-cn,DIRECT
 
@@ -485,50 +398,23 @@ rules:
   - RULE-SET,LocalAreaNetwork,DIRECT
   - RULE-SET,Apple,DIRECT
   - RULE-SET,Tencent,DIRECT
-  
-  - RULE-SET,ChinaDomain,DIRECT
-  
+
   - RULE-SET,GitHub,默认线路
-  - RULE-SET,Google,美国负载
-  - RULE-SET,Telegram,台湾负载
-  - RULE-SET,Twitter,台湾负载
-  - RULE-SET,YouTube,美国负载
+  - RULE-SET,Google,美国集群
+  - RULE-SET,Telegram,香港集群
+  - RULE-SET,Twitter,台湾集群
+  - RULE-SET,YouTube,美国集群
+
+  - RULE-SET,OverseasIP,默认线路,no-resolve
+  - RULE-SET,ChinaDomain,DIRECT
 
   # 进程名
-  - PROCESS-NAME,BitTorrent Web,DIRECT
-  - PROCESS-NAME,qbittorrent,DIRECT
-  - PROCESS-NAME,aCity,默认线路
-  - PROCESS-NAME,Twitter,台湾负载
+  - PROCESS-NAME,BitTorrent Web,DIRECT,no-resolve
+  - PROCESS-NAME,qbittorrent,DIRECT,no-resolve
+  - PROCESS-NAME,aCity,默认线路,no-resolve
+  - PROCESS-NAME,Twitter,台湾集群
 
-  # ============================================================================
-  # IP 规则
-  # ----------------------------------------------------------------------------
-  - IP-CIDR6,2001:67c:4e8::/48,默认线路,no-resolve
-  - IP-CIDR6,2001:b28:f23d::/48,默认线路,no-resolve
-  - IP-CIDR6,2001:b28:f23f::/48,默认线路,no-resolve
-  - IP-CIDR,91.108.4.0/22,默认线路,no-resolve
-  - IP-CIDR,91.108.8.0/21,默认线路,no-resolve
-  - IP-CIDR,91.108.16.0/22,默认线路,no-resolve
-  - IP-CIDR,91.108.56.0/22,默认线路,no-resolve
-  - IP-CIDR,149.154.160.0/20,默认线路,no-resolve
-  - IP-CIDR,120.232.181.162/32,默认线路,no-resolve
-  - IP-CIDR,120.241.147.226/32,默认线路,no-resolve
-  - IP-CIDR,120.253.253.226/32,默认线路,no-resolve
-  - IP-CIDR,120.253.255.162/32,默认线路,no-resolve
-  - IP-CIDR,120.253.255.34/32,默认线路,no-resolve
-  - IP-CIDR,120.253.255.98/32,默认线路,no-resolve
-  - IP-CIDR,180.163.150.162/32,默认线路,no-resolve
-  - IP-CIDR,180.163.150.34/32,默认线路,no-resolve
-  - IP-CIDR,180.163.151.162/32,默认线路,no-resolve
-  - IP-CIDR,180.163.151.34/32,默认线路,no-resolve
-  - IP-CIDR,203.208.39.0/24,默认线路,no-resolve
-  - IP-CIDR,203.208.40.0/24,默认线路,no-resolve
-  - IP-CIDR,203.208.41.0/24,默认线路,no-resolve
-  - IP-CIDR,203.208.43.0/24,默认线路,no-resolve
-  - IP-CIDR,203.208.50.0/24,默认线路,no-resolve
-  - IP-CIDR,220.181.174.162/32,默认线路,no-resolve
-  - IP-CIDR,220.181.174.226/32,默认线路,no-resolve
-  - IP-CIDR,220.181.174.34/32,默认线路,no-resolve
+  - RULE-SET,Applications,DIRECT
 
   # ============================================================================
   # 白名单模式
