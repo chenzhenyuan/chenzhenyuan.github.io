@@ -246,6 +246,7 @@ rule-providers:
     url: https://chenzhenyuan.com/clash/rules/github.yaml
     path: ./ruleset/chenzhenyuan/github.yaml
     interval: 3600
+  # Google
   Google:
     type: http
     behavior: domain
@@ -482,6 +483,7 @@ rules:
   - RULE-SET,Apple,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,GitHub,香港集群
+  - RULE-SET,Google,香港集群
   - RULE-SET,Telegram,台湾负载
   - RULE-SET,Twitter,台湾负载
   # - RULE-SET,ProxyGFWlist,默认线路
