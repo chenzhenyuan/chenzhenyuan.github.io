@@ -1,5 +1,4 @@
 payload:
-  # Apple Inc.
   - "+.a1.mzstatic.com"
   - "+.a2.mzstatic.com"
   - "+.a3.mzstatic.com"
@@ -137,7 +136,6 @@ payload:
   - "+.www.apple.com.edgekey.net"
   - "+.www.apple.com"
   - "+.xp.apple.com"
-  # iCloud
   - "+.www-cdn.icloud.com.akadns.net"
   - "+.applemx-icloud.com"
   - "+.icloud-content.com"
