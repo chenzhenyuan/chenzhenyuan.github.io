@@ -64,7 +64,6 @@ dns:
   fake-ip-filter:
     - "*.lan"
     - "*.local"
-    - "chenzhenyuan.com"
     - "*.chenzhenyuan.com"
     - "*.battlenet.com.cn"
     - "*.battlenet.com"
@@ -76,13 +75,14 @@ dns:
     - "+.msftncsi.com"
     - "+.xboxlive.com"
     - "*.ip.sb"
+    - "*.jsdelivr.net"
     - "ip.sb"
     - "localhost.ptlogin2.qq.com"
     - "msftconnecttest.com"
     - "xbox.*.microsoft.com"
     - "jsdelivr.net"
     - "raw.gitmirror.com"
-    - "*.jsdelivr.net"
+    - "chenzhenyuan.com"
 
   nameserver-policy:
     # 私人域名
