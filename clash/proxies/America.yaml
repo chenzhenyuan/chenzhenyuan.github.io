@@ -43,3 +43,13 @@ proxies:
     alterId: "0"
     cipher: auto
     network: ws
+  - name: "🇺🇲 美国 | F0 | 01"
+    server: 192.74.234.84
+    port: 51302
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: tru
