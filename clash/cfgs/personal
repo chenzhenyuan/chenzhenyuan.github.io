@@ -288,49 +288,49 @@ proxy-groups:
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    lazy: false
+    strategy: consistent-hashing
     use:
       - 香港机房
   - name: 台湾集群
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    lazy: false
+    strategy: consistent-hashing
     use:
       - 台湾机房
   - name: 新加坡集群
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    lazy: false
+    strategy: consistent-hashing
     use:
       - 新加坡机房
   - name: 日本集群
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    lazy: false
+    strategy: consistent-hashing
     use:
       - 日本机房
   - name: 韩国集群
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    lazy: false
+    strategy: consistent-hashing
     use:
       - 韩国机房
   - name: 美国集群
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    lazy: false
+    strategy: consistent-hashing
     use:
       - 美国机房
   - name: 其他集群
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    lazy: false
+    strategy: consistent-hashing
     use:
       - 其他机房
 
