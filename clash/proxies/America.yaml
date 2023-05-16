@@ -52,7 +52,7 @@ proxies:
     cipher: auto
     tls: false
     skip-cert-verify: false
-    udp: tru
+    udp: true
   - name: "🇺🇲 美国 | FR | 07"
     server: 198.2.205.75
     port: 30406
