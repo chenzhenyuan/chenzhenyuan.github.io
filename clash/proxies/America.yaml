@@ -53,3 +53,13 @@ proxies:
     tls: false
     skip-cert-verify: false
     udp: tru
+  - name: "🇺🇲 美国 | F0 | 02"
+    server: 198.2.205.75
+    port: 30406
+    type: vmess
+    uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+    alterId: 64
+    cipher: auto
+    tls: false
+    skip-cert-verify: false
+    udp: true
