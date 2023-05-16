@@ -63,3 +63,18 @@ proxies:
     tls: false
     skip-cert-verify: false
     udp: true
+  - name: "🇺🇲 美国 | FR | ibcl.us"
+    server: 1.0.0.1
+    port: 443
+    type: vmess
+    uuid: ad806487-2d26-4636-98b6-ab85cc8521f7
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    servername: t.ibcl.us
+    network: ws
+    ws-opts:
+      path: "/ibcl.us/nodes/vmess/ws"
+      headers:
+        Host: t.ibcl.us
