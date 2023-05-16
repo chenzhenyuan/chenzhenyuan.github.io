@@ -277,6 +277,7 @@ proxy-groups:
     type: select
     proxies:
       - 全球负载
+      - 手动选择
       - 香港集群
       - 台湾集群
       - 新加坡集群
@@ -284,6 +285,7 @@ proxy-groups:
       - 韩国集群
       - 美国集群
       - 其他集群
+
   - name: 全球负载
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
@@ -298,6 +300,18 @@ proxy-groups:
       - 韩国集群
       - 美国集群
       - 其他集群
+
+  - name: 手动选择
+    type: select
+    use:
+      - 香港机房
+      - 台湾机房
+      - 新加坡机房
+      - 美国机房
+      - 日本机房
+      - 韩国机房
+      - 其他机房
+
   # ============================================================================
   - name: 香港集群
     type: load-balance

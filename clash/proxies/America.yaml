@@ -78,3 +78,13 @@ proxies:
       path: "/ibcl.us/nodes/vmess/ws"
       headers:
         Host: t.ibcl.us
+
+  # 特殊通道
+  - name: "🇺🇲 美国 | 直连 | 666120.xyz"
+    type: trojan
+    server: 4837.easygoml.net
+    port: 60118
+    password: 03ea001a-2c98-45d2-a314-a1d6b5cfbe9f
+    udp: true
+    sni: 4837.easygoml.net
+    skip-cert-verify: true
