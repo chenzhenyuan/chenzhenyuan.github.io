@@ -406,9 +406,9 @@ rules:
   - RULE-SET,Apple,DIRECT
   - RULE-SET,Tencent,DIRECT
 
-  - RULE-SET,GitHub,默认线路
-  - RULE-SET,Google,默认线路
-  - RULE-SET,YouTube,默认线路
+  - RULE-SET,GitHub,香港集群
+  - RULE-SET,Google,美国集群
+  - RULE-SET,YouTube,美国集群
   - RULE-SET,Telegram,默认线路
 
   - RULE-SET,OverseasIP,默认线路,no-resolve
@@ -419,8 +419,8 @@ rules:
   - PROCESS-NAME,qbittorrent,DIRECT,no-resolve
   - PROCESS-NAME,aCity,默认线路,no-resolve
 
-  - RULE-SET,Twitter,默认线路
-  - PROCESS-NAME,Twitter,默认线路
+  - RULE-SET,Twitter,香港集群
+  - PROCESS-NAME,Twitter,香港集群
 
   - RULE-SET,Applications,DIRECT
 
