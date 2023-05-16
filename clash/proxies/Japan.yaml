@@ -1,20 +1,4 @@
 proxies:
-  - name: "🇯🇵 日本 | V2 | 01"
-    type: vmess
-    server: one.jcocp.com
-    port: 37308
-    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
-    alterId: 0
-    cipher: auto
-    udp: true
-  - name: "🇯🇵 日本| V2 | 02"
-    type: vmess
-    server: one.jcocp.com
-    port: 37112
-    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
-    alterId: 0
-    cipher: auto
-    udp: true
   - name: "🇯🇵 日本 | V1 | 01"
     type: vmess
     server: two.jcocp.com
@@ -54,6 +38,29 @@ proxies:
     uuid: a1c600da-1ea4-323b-81ae-e8210317708f
     alterId: 0
     cipher: auto
+    udp: true
+  - name: "🇯🇵 日本 | V2 | 01"
+    type: vmess
+    server: one.jcocp.com
+    port: 37308
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇯🇵 日本 | V2 | 02"
+    type: vmess
+    server: one.jcocp.com
+    port: 37112
+    uuid: a1c600da-1ea4-323b-81ae-e8210317708f
+    alterId: 0
+    cipher: auto
+    udp: true
+  - name: "🇯🇵 日本 | F1 | 01"
+    server: fscde.fscloud123456789.com
+    port: 443
+    type: trojan
+    password: 1f1c4c0b-c77d-4d60-91b3-a6cb5d09a56c
+    skip-cert-verify: false
     udp: true
   - name: "🇯🇵 试用 | 日本 | 01 | 限 20 Mbs"
     type: vmess
