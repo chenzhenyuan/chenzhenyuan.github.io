@@ -43,7 +43,7 @@ proxies:
     alterId: "0"
     cipher: auto
     network: ws
-  - name: "🇺🇲 美国 | F0 | 01"
+  - name: "🇺🇲 美国 | F0 | 06"
     server: 192.74.234.84
     port: 51302
     type: vmess
@@ -53,7 +53,7 @@ proxies:
     tls: false
     skip-cert-verify: false
     udp: tru
-  - name: "🇺🇲 美国 | F0 | 02"
+  - name: "🇺🇲 美国 | F0 | 07"
     server: 198.2.205.75
     port: 30406
     type: vmess
