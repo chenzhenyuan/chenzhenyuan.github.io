@@ -47,8 +47,8 @@ allow-lan: true
 # # 注意: hosts 在 fake-ip 模式下不生效
 hosts:
   "*.chenzhenyuan.cn": 127.0.0.1
-  "chenzhenyuan.cn": 127.0.0.1
   "*.chenzhenyuan.io": 127.0.0.1
+  "chenzhenyuan.cn": 127.0.0.1
   "chenzhenyuan.io": 127.0.0.1
 
 dns:
@@ -57,8 +57,8 @@ dns:
   ipv6: true
   use-hosts: true
   listen: 127.0.0.1:53
-  # 模式: redir-host或fake-ip
-  enhanced-mode: redir-host
+  # 模式: redir-host 或 fake-ip
+  enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   # #列表中的域名将不会被解析为fake ip，这些域名相关的解析请求将会返回它们真实的IP地址
   fake-ip-filter:
@@ -83,20 +83,37 @@ dns:
     - "jsdelivr.net"
     - "raw.gitmirror.com"
     - "*.jsdelivr.net"
+
+  nameserver-policy:
+    # 私人域名
+    "*.chenzhenyuan.com": 119.29.29.29
   # default-nameserver:
-  #   - 223.5.5.5
   #   - 119.29.29.29
-  default-nameserver:
-    - 1.1.1.1
-    - 8.8.8.8
+  #   - 223.5.5.5
   nameserver:
-    - "https://doh.pub/dns-query"
+    - 119.29.29.29
+    - 223.5.5.5
+    # 阿里云 DoH DNS
     - "https://dns.alidns.com/dns-query"
   fallback:
-    - "https://doh.dns.sb/dns-query"
-    - "https://dns.cloudflare.com/dns-query"
-    - "https://dns.twnic.tw/dns-query"
-    - "tls://8.8.4.4:853"
+    # Cloudflare DNS
+    - 1.1.1.1
+    - tls://1.0.0.1:853
+    - https://doh.pub/dns-query
+    - https://dns.cloudflare.com/dns-query
+
+    # Google
+    - 8.8.8.8
+    - tls://8.8.4.4:853
+    - tls://dns.google:853
+    - https://dns.google/dns-query
+
+    - 45.11.45.11
+    - https://45.11.45.11/dns-query
+    - 185.222.222.222
+    - https://185.222.222.222/dns-query
+    - https://doh.sb/dns-query
+    # - https://doh.dns.sb/dns-query
   fallback-filter:
     geoip: true
     ipcidr:
@@ -267,7 +284,6 @@ proxy-groups:
       - 韩国集群
       - 美国集群
       - 其他集群
-
   - name: 全球负载
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
@@ -282,7 +298,6 @@ proxy-groups:
       - 韩国集群
       - 美国集群
       - 其他集群
-
   # ============================================================================
   - name: 香港集群
     type: load-balance
@@ -338,13 +353,11 @@ rules:
   # ============================================================================
   # 私人定制
   # ----------------------------------------------------------------------------
-  - DOMAIN,jayne-mini.local,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,local,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,chenzhenyuan.com,DIRECT
-
-  - DOMAIN,cdn.jsdelivr.net,DIRECT,no-resolve
-  - DOMAIN,raw.gitmirror.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,chenzhenyuan.com,DIRECT,no-resolve
+  - DOMAIN,raw.gitmirror.com,DIRECT
   - DOMAIN,raw.iqiq.io,DIRECT
+  - DOMAIN,cdn.jsdelivr.net,DIRECT
+
   - DOMAIN-SUFFIX,sketch.cloud,DIRECT
   - DOMAIN-KEYWORD,logitech,DIRECT,no-resolve
 
@@ -388,7 +401,7 @@ rules:
   - DOMAIN-KEYWORD,usage,REJECT
   - DOMAIN-KEYWORD,wlmonitor,REJECT
   - DOMAIN-KEYWORD,zjtoolbar,REJECT
-  - RULE-SET,AdBlock,REJECT
+  # - RULE-SET,AdBlock,REJECT
 
   # ============================================================================
   # 直连规则
@@ -414,7 +427,7 @@ rules:
   - RULE-SET,OverseasIP,默认线路,no-resolve
   - RULE-SET,ChinaDomain,DIRECT
 
-  # 进程名
+  # # 进程名
   - PROCESS-NAME,BitTorrent Web,DIRECT,no-resolve
   - PROCESS-NAME,qbittorrent,DIRECT,no-resolve
   - PROCESS-NAME,aCity,默认线路,no-resolve
@@ -422,7 +435,7 @@ rules:
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
 
-  - RULE-SET,Applications,DIRECT
+  # - RULE-SET,Applications,DIRECT
 
   # ============================================================================
   # 白名单模式
