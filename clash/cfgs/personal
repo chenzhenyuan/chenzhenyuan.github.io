@@ -340,6 +340,7 @@ rules:
   - DOMAIN-SUFFIX,local,DIRECT,no-resolve
   - DOMAIN-SUFFIX,chenzhenyuan.com,DIRECT
 
+  - DOMAIN,cdn.jsdelivr.net,DIRECT,no-resolve
   - DOMAIN,raw.gitmirror.com,DIRECT,no-resolve
   - DOMAIN,raw.iqiq.io,DIRECT
   - DOMAIN-SUFFIX,sketch.cloud,DIRECT
