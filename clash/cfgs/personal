@@ -404,15 +404,6 @@ rules:
   # - RULE-SET,AdBlock,REJECT
 
   # ============================================================================
-  # 直连规则
-  # ----------------------------------------------------------------------------
-  - DOMAIN,api.faviconkit.com,DIRECT,no-resolve
-  - DOMAIN,s.deepl.com,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,cn,DIRECT
-  - DOMAIN-KEYWORD,-cn,DIRECT
-
-  # ============================================================================
   # 规则集
   # ----------------------------------------------------------------------------
   - RULE-SET,LocalAreaNetwork,DIRECT
@@ -426,16 +417,22 @@ rules:
   - RULE-SET,Apple,DIRECT
   - RULE-SET,Tencent,DIRECT
 
-  - RULE-SET,ChinaDomain,DIRECT
-
-  # # 进程名
-  - PROCESS-NAME,BitTorrent Web,DIRECT,no-resolve
-  - PROCESS-NAME,qbittorrent,DIRECT,no-resolve
   - PROCESS-NAME,aCity,默认线路,no-resolve
-
+  # ============================================================================
+  # Twitter
+  # ----------------------------------------------------------------------------
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
 
+  # ============================================================================
+  # 直连规则
+  # ----------------------------------------------------------------------------
+  - DOMAIN,api.faviconkit.com,DIRECT,no-resolve
+  - DOMAIN,s.deepl.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Applications,DIRECT
 
   # ============================================================================
