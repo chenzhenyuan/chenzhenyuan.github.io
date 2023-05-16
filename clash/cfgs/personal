@@ -405,9 +405,9 @@ rules:
   - RULE-SET,Tencent,DIRECT
 
   - RULE-SET,GitHub,默认线路
-  - RULE-SET,Google,美国集群
-  - RULE-SET,YouTube,美国集群
-  - RULE-SET,Telegram,香港集群
+  - RULE-SET,Google,默认线路
+  - RULE-SET,YouTube,默认线路
+  - RULE-SET,Telegram,默认线路
 
   - RULE-SET,OverseasIP,默认线路,no-resolve
   - RULE-SET,ChinaDomain,DIRECT
