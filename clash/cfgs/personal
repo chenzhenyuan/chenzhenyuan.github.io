@@ -103,6 +103,7 @@ dns:
       - 240.0.0.0/4
       - 127.0.0.1/32
       - 0.0.0.0/32
+
 proxy-providers:
   香港机房:
     type: http
@@ -270,8 +271,9 @@ proxy-groups:
   - name: 全球负载
     type: load-balance
     url: "http://www.gstatic.com/generate_204"
-    interval: 180
-    lazy: false
+    interval: 60
+    # strategy: <consistent-hashing | round-robin>
+    strategy: consistent-hashing
     proxies:
       - 香港集群
       - 台湾集群
@@ -283,49 +285,49 @@ proxy-groups:
 
   # ============================================================================
   - name: 香港集群
-    type: url-test
+    type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 香港机房
   - name: 台湾集群
-    type: url-test
+    type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 台湾机房
   - name: 新加坡集群
-    type: url-test
+    type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 新加坡机房
   - name: 日本集群
-    type: url-test
+    type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 日本机房
   - name: 韩国集群
-    type: url-test
+    type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 韩国机房
   - name: 美国集群
-    type: url-test
+    type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
     use:
       - 美国机房
   - name: 其他集群
-    type: url-test
+    type: load-balance
     url: "http://www.gstatic.com/generate_204"
     interval: 300
     lazy: false
