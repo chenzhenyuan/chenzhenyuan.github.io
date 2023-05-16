@@ -69,6 +69,7 @@ payload:
   - "+.googleadservices.com"
   - "+.googleanalytics.com"
   - "+.googleapis-cn.com"
+  - "services.googleapis.cn"
   - "+.googleapps-cn.com"
   - "+.googleflights-cn.net"
   - "+.googleoptimize-cn.com"

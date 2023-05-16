@@ -416,15 +416,16 @@ rules:
   # 规则集
   # ----------------------------------------------------------------------------
   - RULE-SET,LocalAreaNetwork,DIRECT
-  - RULE-SET,Apple,DIRECT
-  - RULE-SET,Tencent,DIRECT
 
   - RULE-SET,GitHub,香港集群
   - RULE-SET,Google,美国集群
   - RULE-SET,YouTube,美国集群
   - RULE-SET,Telegram,默认线路
-
   - RULE-SET,OverseasIP,默认线路,no-resolve
+
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Tencent,DIRECT
+
   - RULE-SET,ChinaDomain,DIRECT
 
   # # 进程名
