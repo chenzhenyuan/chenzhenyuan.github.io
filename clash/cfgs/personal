@@ -435,7 +435,7 @@ rules:
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
 
-  # - RULE-SET,Applications,DIRECT
+  - RULE-SET,Applications,DIRECT
 
   # ============================================================================
   # 白名单模式
