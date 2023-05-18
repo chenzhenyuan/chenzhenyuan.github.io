@@ -373,7 +373,8 @@ rules:
   - DOMAIN,cdn.jsdelivr.net,DIRECT
 
   - DOMAIN-SUFFIX,sketch.cloud,DIRECT
-  - DOMAIN-KEYWORD,logitech,DIRECT,no-resolve
+  - DOMAIN,flow.logitech.io,DIRECT,no-resolve
+  # - DOMAIN-KEYWORD,logitech,DIRECT,no-resolve
 
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   # ============================================================================
@@ -422,7 +423,9 @@ rules:
   # ----------------------------------------------------------------------------
   - RULE-SET,LocalAreaNetwork,DIRECT
 
+  - DOMAIN,api.github.com,DIRECT,no-resolve
   - RULE-SET,GitHub,香港集群
+
   - RULE-SET,Google,美国集群
   - RULE-SET,YouTube,美国集群
   - RULE-SET,Telegram,默认线路
