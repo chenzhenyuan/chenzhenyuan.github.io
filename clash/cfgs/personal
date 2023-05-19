@@ -205,8 +205,8 @@ rule-providers:
   Applications:
     type: http
     behavior: classical
-    url: https://chenzhenyuan.com/clash/rules/applications.yaml
-    path: ./ruleset/chenzhenyuan/applications.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/applications.yaml
+    path: ./ruleset/JAYNE0110/clashx/applications.yaml
     interval: 3600
   ChinaDomain:
     type: http
@@ -217,20 +217,20 @@ rule-providers:
   GitHub:
     type: http
     behavior: classical
-    url: https://chenzhenyuan.com/clash/rules/github.yaml
-    path: ./ruleset/chenzhenyuan/github.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/github.yaml
+    path: ./ruleset/JAYNE0110/clashx/github.yaml
     interval: 3600
   Google:
     type: http
     behavior: classical
     url: https://raw.iqiq.io/Semporia/Clash/master/Rule/Google.yaml
-    path: ./ruleset/chenzhenyuan/google.yaml
+    path: ./ruleset/Semporia/Clash/google.yaml
     interval: 3600
   LocalAreaNetwork:
     type: http
     behavior: classical
-    url: https://chenzhenyuan.com/clash/rules/lan.yaml
-    path: ./ruleset/chenzhenyuan/lan.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/lan.yaml
+    path: ./ruleset/JAYNE0110/clashx/lan.yaml
     interval: 86400
   GFW:
     type: http
@@ -255,14 +255,14 @@ rule-providers:
   Tencent:
     type: http
     behavior: classical
-    url: https://chenzhenyuan.com/clash/rules/tencent.yaml
-    path: ./ruleset/chenzhenyuan/tencent.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/tencent.yaml
+    path: ./ruleset/JAYNE0110/clashx/tencent.yaml
     interval: 3600
   Twitter:
     type: http
     behavior: classical
-    url: https://chenzhenyuan.com/clash/rules/twitter.yaml
-    path: ./ruleset/chenzhenyuan/twitter.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/twitter.yaml
+    path: ./ruleset/JAYNE0110/clashx/twitter.yaml
     interval: 3600
   YouTube:
     type: http
