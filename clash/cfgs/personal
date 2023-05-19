@@ -199,7 +199,7 @@ rule-providers:
     type: http
     behavior: classical
     # url: https://chenzhenyuan.com/clash/rules/apple.yaml
-    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/rules/apple.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/apple.yaml
     path: ./ruleset/JAYNE0110/clashx/apple.yaml
     interval: 3600
   Applications:
@@ -241,14 +241,14 @@ rule-providers:
   OverseasIP:
     type: http
     behavior: classical
-    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/rules/overseas-ip
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/overseas-ip
     path: ./ruleset/JAYNE0110/clashx/overseas-ip.yaml
     format: yaml
     interval: 3600
   Telegram:
     type: http
     behavior: classical
-    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/rules/telegram
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/telegram
     path: ./ruleset/JAYNE0110/clashx/telegram.yaml
     format: yaml
     interval: 3600
