@@ -192,13 +192,13 @@ rule-providers:
   AdBlock:
     type: http
     behavior: classical
-    url: https://raw.iqiq.io/Semporia/Clash/master/Rule/AdBlock.yaml
-    path: ./ruleset/Semporia/Clash/AdBlock.yaml
+    # url: https://raw.iqiq.io/Semporia/Clash/master/Rule/AdBlock.yaml
+    url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/apple.yaml
+    path: ./ruleset/JAYNE0110/clashx/AdBlock.yaml
     interval: 3600
   Apple:
     type: http
     behavior: classical
-    # url: https://chenzhenyuan.com/clash/rules/apple.yaml
     url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/apple.yaml
     path: ./ruleset/JAYNE0110/clashx/apple.yaml
     interval: 3600
