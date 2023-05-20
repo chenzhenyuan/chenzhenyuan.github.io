@@ -211,7 +211,7 @@ rule-providers:
   ChinaDomain:
     type: http
     behavior: classical
-    url: https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Providers/ChinaDomain.yaml
+    url: https://raw.iqiq.io/ACL4SSR/ACL4SSR/master/Clash/Providers/ChinaDomain.yaml
     path: ./ruleset/ACL4SSR/ACL4SSR/ChinaDomain.yaml
     interval: 3600
   GitHub:
@@ -231,11 +231,12 @@ rule-providers:
     behavior: classical
     url: https://raw.iqiq.io/JAYNE0110/clashx/release/providers/ruleset/lan.yaml
     path: ./ruleset/JAYNE0110/clashx/lan.yaml
-    interval: 86400
+    interval: 3600
   GFW:
     type: http
     behavior: domain
-    url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    # url: https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt
+    url: https://raw.iqiq.io/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml
     path: ./ruleset/Loyalsoldier/clash-rules/ProxyGFWlist.yaml
     interval: 3600
   OverseasIP:
