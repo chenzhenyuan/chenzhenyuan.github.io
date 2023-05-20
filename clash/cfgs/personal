@@ -64,7 +64,8 @@ dns:
   fake-ip-filter:
     - "*.lan"
     - "*.local"
-    - "*.chenzhenyuan.com"
+    # - "*.chenzhenyuan.com"
+    # - "chenzhenyuan.com"
     - "*.battlenet.com.cn"
     - "*.battlenet.com"
     - "*.blzstatic.cn"
@@ -75,14 +76,13 @@ dns:
     - "+.msftncsi.com"
     - "+.xboxlive.com"
     - "*.ip.sb"
-    - "*.jsdelivr.net"
     - "ip.sb"
     - "localhost.ptlogin2.qq.com"
     - "msftconnecttest.com"
     - "xbox.*.microsoft.com"
-    - "jsdelivr.net"
     - "raw.gitmirror.com"
-    - "chenzhenyuan.com"
+    - "*.jsdelivr.net"
+    - "jsdelivr.net"
 
   nameserver-policy:
     # 私人域名
@@ -239,7 +239,6 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       interval: 300
 
-# <classical | domain>
 rule-providers:
   AdBlock:
     type: http
