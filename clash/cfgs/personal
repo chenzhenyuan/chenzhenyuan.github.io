@@ -83,12 +83,10 @@ dns:
     - "raw.gitmirror.com"
     - "*.jsdelivr.net"
     - "jsdelivr.net"
-    - "raw.iqiq.io"
 
   nameserver-policy:
     # 私人域名
     "*.chenzhenyuan.com": 119.29.29.29
-    "raw.iqiq.io": 119.29.29.29
   # default-nameserver:
   #   - 119.29.29.29
   #   - 223.5.5.5
@@ -438,9 +436,53 @@ rules:
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   - DOMAIN,free-ss.site,香港集群
 
+  - RULE-SET,Apple,DIRECT,REJECT
+
+  # ***********************************
+  # * IP测试相关的规则
+  # ***********************************
+  - DOMAIN,ip.900cha.com,DIRECT,no-resolve
+  - DOMAIN,ip111.cn,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
+
+  # ***********************************
+  # * 直连规则
+  # ***********************************
+  - DOMAIN,flow.logitech.io,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,sketch.cloud,DIRECT
+
+  - DOMAIN,api.faviconkit.com,DIRECT,no-resolve
+  - DOMAIN,s.deepl.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+
+  - RULE-SET,LocalAreaNetwork,DIRECT
+
+  # ***********************************
+  # 设置规则集
+  # ***********************************
+  - RULE-SET,GitHub,香港集群
+
+  - RULE-SET,Google,美国集群
+  - RULE-SET,YouTube,美国集群
+  - RULE-SET,Telegram,默认线路
+
+  # Twitter
+  - RULE-SET,Twitter,香港集群
+  - PROCESS-NAME,Twitter,香港集群
+
+  - RULE-SET,OverseasIP,默认线路,no-resolve
+  - PROCESS-NAME,aCity,默认线路,no-resolve
+
+  - RULE-SET,Tencent,DIRECT
+  - RULE-SET,ChinaDomain,DIRECT
+  - RULE-SET,Applications,DIRECT
+
   # ***********************************
   # * 常见广告域名屏蔽
   # ***********************************
+  - RULE-SET,AdBlock,REJECT
   - DOMAIN,injections.adguard.org,REJECT
   - DOMAIN,local.adguard.org,REJECT
   - DOMAIN-SUFFIX,appsflyer.com,REJECT
@@ -470,48 +512,6 @@ rules:
   - DOMAIN-KEYWORD,usage,REJECT
   - DOMAIN-KEYWORD,wlmonitor,REJECT
   - DOMAIN-KEYWORD,zjtoolbar,REJECT
-  - RULE-SET,AdBlock,REJECT
-
-  # ***********************************
-  # * IP测试相关的规则
-  # ***********************************
-  - DOMAIN,ip.900cha.com,DIRECT,no-resolve
-  - DOMAIN,ip111.cn,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
-
-  # ***********************************
-  # * 直连规则
-  # ***********************************
-  - DOMAIN,flow.logitech.io,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,sketch.cloud,DIRECT
-
-  - DOMAIN,api.faviconkit.com,DIRECT,no-resolve
-  - DOMAIN,s.deepl.com,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,cn,DIRECT
-  - DOMAIN-KEYWORD,-cn,DIRECT
-  - RULE-SET,LocalAreaNetwork,DIRECT
-  - RULE-SET,Apple,DIRECT,no-resolve
-
-  # ***********************************
-  # 设置规则集
-  # ***********************************
-  - RULE-SET,GitHub,香港集群
-
-  - RULE-SET,Google,美国集群
-  - RULE-SET,YouTube,美国集群
-  - RULE-SET,Telegram,默认线路
-
-  # Twitter
-  - RULE-SET,Twitter,香港集群
-  - PROCESS-NAME,Twitter,香港集群
-
-  - RULE-SET,OverseasIP,默认线路,no-resolve
-  - PROCESS-NAME,aCity,默认线路,no-resolve
-
-  - RULE-SET,Tencent,DIRECT
-  - RULE-SET,ChinaDomain,DIRECT
-  - RULE-SET,Applications,DIRECT
 
   # ***********************************
   # 白名单模式
