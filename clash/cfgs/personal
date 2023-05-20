@@ -433,6 +433,7 @@ rules:
   # 特殊站点 [临时方案]
   # ----------------------------------------------------------------------------
   - DOMAIN-SUFFIX,trafficmanager.net,DIRECT,no-resolve
+  - DOMAIN,api.github.com,DIRECT,no-resolve
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   - DOMAIN,free-ss.site,香港集群
   # ============================================================================
@@ -481,7 +482,7 @@ rules:
   # ----------------------------------------------------------------------------
   - RULE-SET,LocalAreaNetwork,DIRECT
 
-  - DOMAIN,api.github.com,DIRECT,no-resolve
+  - RULE-SET,Apple,DIRECT,no-resolve
   - RULE-SET,GitHub,香港集群
 
   - RULE-SET,Google,美国集群
@@ -489,17 +490,14 @@ rules:
   - RULE-SET,Telegram,默认线路
   - RULE-SET,OverseasIP,默认线路,no-resolve
 
-  - RULE-SET,Apple,DIRECT,no-resolve
   - RULE-SET,Tencent,DIRECT
-
-  - PROCESS-NAME,aCity,默认线路,no-resolve
-
   # ============================================================================
   # Twitter
   # ----------------------------------------------------------------------------
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
 
+  - PROCESS-NAME,aCity,默认线路,no-resolve
   # ============================================================================
   # 直连规则
   # ----------------------------------------------------------------------------
