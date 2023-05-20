@@ -83,10 +83,12 @@ dns:
     - "raw.gitmirror.com"
     - "*.jsdelivr.net"
     - "jsdelivr.net"
+    - "raw.iqiq.io"
 
   nameserver-policy:
     # 私人域名
     "*.chenzhenyuan.com": 119.29.29.29
+    "raw.iqiq.io": 119.29.29.29
   # default-nameserver:
   #   - 119.29.29.29
   #   - 223.5.5.5
