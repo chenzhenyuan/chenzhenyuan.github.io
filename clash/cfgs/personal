@@ -455,19 +455,14 @@ rules:
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-KEYWORD,-cn,DIRECT
 
-  - RULE-SET,LocalAreaNetwork,DIRECT
-
   # ***********************************
   # 设置规则集
   # ***********************************
   - RULE-SET,Apple,DIRECT,no-resolve
-
   - RULE-SET,GitHub,香港集群
-
   - RULE-SET,Google,美国集群
   - RULE-SET,YouTube,美国集群
   - RULE-SET,Telegram,默认线路
-
   # Twitter
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
@@ -478,6 +473,7 @@ rules:
   - RULE-SET,Tencent,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Applications,DIRECT
+  - RULE-SET,LocalAreaNetwork,DIRECT
 
   # ***********************************
   # * 常见广告域名屏蔽
