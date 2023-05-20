@@ -437,6 +437,7 @@ rules:
   - DOMAIN,api.github.com,DIRECT,no-resolve
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   - DOMAIN,free-ss.site,香港集群
+
   # ***********************************
   # * IP测试相关的规则
   # ***********************************
@@ -496,6 +497,7 @@ rules:
   # ***********************************
   # 规则集
   # ***********************************
+  #
   - RULE-SET,LocalAreaNetwork,DIRECT
 
   - RULE-SET,Apple,DIRECT,no-resolve
@@ -510,6 +512,7 @@ rules:
   # ***********************************
   # Twitter
   # ***********************************
+  #
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
 
@@ -521,5 +524,6 @@ rules:
   # ***********************************
   # 白名单模式
   # ***********************************
+  #
   - GEOIP,CN,DIRECT
   - MATCH,默认线路
