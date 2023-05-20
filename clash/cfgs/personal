@@ -438,28 +438,6 @@ rules:
   - DOMAIN,free-ss.site,香港集群
 
   # ***********************************
-  # * IP测试相关的规则
-  # ***********************************
-  #
-  - DOMAIN,ip.900cha.com,DIRECT,no-resolve
-  - DOMAIN,ip111.cn,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
-
-  # ***********************************
-  # * 直连规则
-  # ***********************************
-  #
-  - DOMAIN,flow.logitech.io,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,sketch.cloud,DIRECT
-
-  - DOMAIN,api.faviconkit.com,DIRECT,no-resolve
-  - DOMAIN,s.deepl.com,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,cn,DIRECT
-  - DOMAIN-KEYWORD,-cn,DIRECT
-  - RULE-SET,LocalAreaNetwork,DIRECT
-  - RULE-SET,Apple,DIRECT,no-resolve
-  # ***********************************
   # * 常见广告域名屏蔽
   # ***********************************
   #
@@ -493,6 +471,29 @@ rules:
   - DOMAIN-KEYWORD,wlmonitor,REJECT
   - DOMAIN-KEYWORD,zjtoolbar,REJECT
   - RULE-SET,AdBlock,REJECT
+
+  # ***********************************
+  # * IP测试相关的规则
+  # ***********************************
+  #
+  - DOMAIN,ip.900cha.com,DIRECT,no-resolve
+  - DOMAIN,ip111.cn,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
+
+  # ***********************************
+  # * 直连规则
+  # ***********************************
+  #
+  - DOMAIN,flow.logitech.io,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,sketch.cloud,DIRECT
+
+  - DOMAIN,api.faviconkit.com,DIRECT,no-resolve
+  - DOMAIN,s.deepl.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - DOMAIN-KEYWORD,-cn,DIRECT
+  - RULE-SET,LocalAreaNetwork,DIRECT
+  - RULE-SET,Apple,DIRECT,no-resolve
 
   # ***********************************
   # 规则集
