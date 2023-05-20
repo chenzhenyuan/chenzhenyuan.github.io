@@ -458,7 +458,6 @@ rules:
   # ***********************************
   # 设置规则集
   # ***********************************
-  - RULE-SET,Apple,DIRECT,no-resolve
   - RULE-SET,GitHub,香港集群
   - RULE-SET,Google,美国集群
   - RULE-SET,YouTube,美国集群
@@ -470,6 +469,7 @@ rules:
   - RULE-SET,OverseasIP,默认线路,no-resolve
   - PROCESS-NAME,aCity,默认线路,no-resolve
 
+  - RULE-SET,Apple,DIRECT,no-resolve
   - RULE-SET,Tencent,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Applications,DIRECT
