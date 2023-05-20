@@ -483,7 +483,6 @@ rules:
   # ***********************************
   # * 直连规则
   # ***********************************
-  #
   - DOMAIN,flow.logitech.io,DIRECT,no-resolve
   - DOMAIN-SUFFIX,sketch.cloud,DIRECT
 
@@ -496,9 +495,8 @@ rules:
   - RULE-SET,Apple,DIRECT,no-resolve
 
   # ***********************************
-  # 规则集
+  # 设置规则集
   # ***********************************
-  #
   - RULE-SET,GitHub,香港集群
 
   - RULE-SET,Google,美国集群
