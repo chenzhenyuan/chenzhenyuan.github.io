@@ -428,6 +428,10 @@ rules:
   - DOMAIN,raw.gitmirror.com,DIRECT,no-resolve
   - DOMAIN,raw.iqiq.io,DIRECT,no-resolve
   - DOMAIN,cdn.jsdelivr.net,DIRECT,no-resolve
+
+  # ============================================================================
+  # 特殊站点 [临时方案]
+  # ----------------------------------------------------------------------------
   - DOMAIN-SUFFIX,trafficmanager.net,DIRECT,no-resolve
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   - DOMAIN,free-ss.site,香港集群
