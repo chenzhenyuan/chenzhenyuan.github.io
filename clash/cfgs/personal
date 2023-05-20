@@ -436,8 +436,6 @@ rules:
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   - DOMAIN,free-ss.site,香港集群
 
-  - RULE-SET,Apple,DIRECT,REJECT
-
   # ***********************************
   # * IP测试相关的规则
   # ***********************************
@@ -462,6 +460,8 @@ rules:
   # ***********************************
   # 设置规则集
   # ***********************************
+  - RULE-SET,Apple,DIRECT,no-resolve
+
   - RULE-SET,GitHub,香港集群
 
   - RULE-SET,Google,美国集群
