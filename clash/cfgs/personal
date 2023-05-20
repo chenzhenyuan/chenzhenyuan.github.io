@@ -457,7 +457,8 @@ rules:
   - DOMAIN-SUFFIX,appcenter.ms,DIRECT,no-resolve
   - DOMAIN-SUFFIX,cn,DIRECT
   - DOMAIN-KEYWORD,-cn,DIRECT
-
+  - RULE-SET,LocalAreaNetwork,DIRECT
+  - RULE-SET,Apple,DIRECT,no-resolve
   # ***********************************
   # * 常见广告域名屏蔽
   # ***********************************
@@ -497,19 +498,12 @@ rules:
   # 规则集
   # ***********************************
   #
-  - RULE-SET,LocalAreaNetwork,DIRECT
-
-  - RULE-SET,Apple,DIRECT,no-resolve
   - RULE-SET,GitHub,香港集群
 
   - RULE-SET,Google,美国集群
   - RULE-SET,YouTube,美国集群
   - RULE-SET,Telegram,默认线路
   - RULE-SET,OverseasIP,默认线路,no-resolve
-
-  - RULE-SET,Tencent,DIRECT
-
-  - PROCESS-NAME,aCity,默认线路,no-resolve
 
   # ***********************************
   # Twitter
@@ -518,6 +512,9 @@ rules:
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
 
+  - PROCESS-NAME,aCity,默认线路,no-resolve
+
+  - RULE-SET,Tencent,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Applications,DIRECT
 
