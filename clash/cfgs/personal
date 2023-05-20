@@ -125,7 +125,7 @@ proxy-providers:
   香港机房:
     type: http
     path: ./proxies/HongKong.yaml
-    url: https://chenzhenyuan.com/clash/proxies/HongKong.yaml
+    url: https://chenzhenyuan.com/clash/providers/proxies/HongKong.yaml
     filter: 香港
     health-check:
       enable: true
@@ -135,7 +135,7 @@ proxy-providers:
   台湾机房:
     type: http
     path: ./proxies/Taiwan.yaml
-    url: https://chenzhenyuan.com/clash/proxies/Taiwan.yaml
+    url: https://chenzhenyuan.com/clash/providers/proxies/Taiwan.yaml
     filter: 台湾
     health-check:
       enable: true
@@ -145,7 +145,7 @@ proxy-providers:
   新加坡机房:
     type: http
     path: ./proxies/Singapore.yaml
-    url: https://chenzhenyuan.com/clash/proxies/Singapore.yaml
+    url: https://chenzhenyuan.com/clash/providers/proxies/Singapore.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -154,7 +154,7 @@ proxy-providers:
   日本机房:
     type: http
     path: ./proxies/Japan.yaml
-    url: https://chenzhenyuan.com/clash/proxies/Japan.yaml
+    url: https://chenzhenyuan.com/clash/providers/proxies/Japan.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -163,7 +163,7 @@ proxy-providers:
   韩国机房:
     type: http
     path: ./proxies/Korea.yaml
-    url: https://chenzhenyuan.com/clash/proxies/Korea.yaml
+    url: https://chenzhenyuan.com/clash/providers/proxies/Korea.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -172,7 +172,7 @@ proxy-providers:
   美国机房:
     type: http
     path: ./proxies/America.yaml
-    url: https://chenzhenyuan.com/clash/proxies/America.yaml
+    url: https://chenzhenyuan.com/clash/providers/proxies/America.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -181,7 +181,7 @@ proxy-providers:
   其他机房:
     type: http
     path: ./proxies/GlobalArea.yaml
-    url: https://chenzhenyuan.com/clash/proxies/GlobalArea.yaml
+    url: https://chenzhenyuan.com/clash/providers/proxies/GlobalArea.yaml
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
