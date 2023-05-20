@@ -509,14 +509,15 @@ rules:
   - RULE-SET,OverseasIP,默认线路,no-resolve
 
   - RULE-SET,Tencent,DIRECT
+
+  - PROCESS-NAME,aCity,默认线路,no-resolve
+
   # ***********************************
   # Twitter
   # ***********************************
   #
   - RULE-SET,Twitter,香港集群
   - PROCESS-NAME,Twitter,香港集群
-
-  - PROCESS-NAME,aCity,默认线路,no-resolve
 
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Applications,DIRECT
