@@ -431,7 +431,6 @@ rules:
   # ***********************************
   # * 特殊站点 [临时方案]
   # ***********************************
-  #
   - DOMAIN-SUFFIX,trafficmanager.net,DIRECT,no-resolve
   - DOMAIN,api.github.com,DIRECT,no-resolve
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
@@ -440,7 +439,6 @@ rules:
   # ***********************************
   # * 常见广告域名屏蔽
   # ***********************************
-  #
   - DOMAIN,injections.adguard.org,REJECT
   - DOMAIN,local.adguard.org,REJECT
   - DOMAIN-SUFFIX,appsflyer.com,REJECT
@@ -475,7 +473,6 @@ rules:
   # ***********************************
   # * IP测试相关的规则
   # ***********************************
-  #
   - DOMAIN,ip.900cha.com,DIRECT,no-resolve
   - DOMAIN,ip111.cn,DIRECT,no-resolve
   - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
@@ -517,6 +514,5 @@ rules:
   # ***********************************
   # 白名单模式
   # ***********************************
-  #
   - GEOIP,CN,DIRECT
   - MATCH,默认线路
