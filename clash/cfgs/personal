@@ -463,9 +463,9 @@ rules:
   # ***********************************
   # 设置规则集
   # ***********************************
-  - RULE-SET,GitHub,香港集群
-  - RULE-SET,Google,默认线路
+  - RULE-SET,Google,美国集群
   - RULE-SET,YouTube,美国集群
+  - RULE-SET,GitHub,香港集群
   - RULE-SET,Telegram,默认线路
   # Twitter
   - RULE-SET,Twitter,香港集群
