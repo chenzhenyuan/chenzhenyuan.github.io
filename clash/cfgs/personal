@@ -432,6 +432,7 @@ rules:
   - DOMAIN,raw.iqiq.io,DIRECT
   - DOMAIN,raw.gitmirror.com,DIRECT
   - DOMAIN,cdn.jsdelivr.net,DIRECT
+  - DOMAIN-SUFFIX,npmjs.org,DIRECT
 
   # ***********************************
   # * 特殊站点 [临时方案]
