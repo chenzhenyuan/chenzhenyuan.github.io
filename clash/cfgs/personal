@@ -120,6 +120,7 @@ dns:
     - "https://dns.alidns.com/dns-query"
     # DoT
     - "tls://dns.alidns.com"
+
   fallback:
     # ====================================
     # Cloudflare IPv4 > IPv6 > DoH > DoT
@@ -328,6 +329,8 @@ proxy-groups:
   - name: 默认线路
     # <url-test | select | load-balance | random | fallback>
     type: select
+    interval: 60
+    lazy: true
     proxies:
       - 全球负载
       - 手动选择
@@ -341,10 +344,9 @@ proxy-groups:
 
   - name: 全球负载
     type: load-balance
-    url: "http://www.gstatic.com/generate_204"
-    interval: 60
-    # strategy: <consistent-hashing | round-robin>
     strategy: consistent-hashing
+    interval: 60
+    url: "http://www.gstatic.com/generate_204"
     proxies:
       - 香港集群
       - 台湾集群
@@ -356,6 +358,8 @@ proxy-groups:
 
   - name: 手动选择
     type: select
+    interval: 60
+    lazy: true
     use:
       - 香港机房
       - 台湾机房
