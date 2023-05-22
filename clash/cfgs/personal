@@ -424,29 +424,29 @@ rules:
   # ***********************************
   # * 私人定制
   # ***********************************
-  - DOMAIN-SUFFIX,chenzhenyuan.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,chenzhenyuan.com,DIRECT
 
   # ***********************************
   # * CDN 加速域名 （直接放行）
   # ***********************************
-  - DOMAIN,raw.gitmirror.com,DIRECT,no-resolve
-  - DOMAIN,raw.iqiq.io,DIRECT,no-resolve
-  - DOMAIN,cdn.jsdelivr.net,DIRECT,no-resolve
+  - DOMAIN,raw.iqiq.io,DIRECT
+  - DOMAIN,raw.gitmirror.com,DIRECT
+  - DOMAIN,cdn.jsdelivr.net,DIRECT
 
   # ***********************************
   # * 特殊站点 [临时方案]
   # ***********************************
-  - DOMAIN-SUFFIX,trafficmanager.net,DIRECT,no-resolve
-  - DOMAIN,api.github.com,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,trafficmanager.net,DIRECT
+  - DOMAIN,api.github.com,DIRECT
   - DOMAIN-SUFFIX,mac-torrent-download.net,默认线路
   - DOMAIN,free-ss.site,香港集群
 
   # ***********************************
   # * IP测试相关的规则
   # ***********************************
-  - DOMAIN,ip.900cha.com,DIRECT,no-resolve
+  - DOMAIN,ip.900cha.com,DIRECT
   - DOMAIN,ip111.cn,DIRECT,no-resolve
-  - DOMAIN-SUFFIX,ip.sb,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,ip.sb,DIRECT
 
   # ***********************************
   # * 强制代理规则
