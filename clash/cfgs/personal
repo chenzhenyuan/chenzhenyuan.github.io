@@ -80,9 +80,10 @@ dns:
     - "localhost.ptlogin2.qq.com"
     - "msftconnecttest.com"
     - "xbox.*.microsoft.com"
-    - "raw.gitmirror.com"
     - "*.jsdelivr.net"
     - "jsdelivr.net"
+    - "raw.gitmirror.com"
+    - "raw.iqiq.io"
 
   nameserver-policy:
     # 私人域名
