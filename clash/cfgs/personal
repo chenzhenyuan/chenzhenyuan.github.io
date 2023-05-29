@@ -85,9 +85,9 @@ dns:
     - "raw.gitmirror.com"
     - "raw.iqiq.io"
 
-  # default-nameserver:
-  #   - 119.29.29.29
-  #   - 223.5.5.5
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
 
   nameserver:
     # ==================
