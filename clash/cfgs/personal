@@ -89,10 +89,6 @@ dns:
   #   - 119.29.29.29
   #   - 223.5.5.5
 
-  nameserver-policy:
-    # 私人域名
-    "*.chenzhenyuan.com": 119.29.29.29
-
   nameserver:
     # ==================
     # DNSPod Public DNS
@@ -176,6 +172,10 @@ dns:
       - 240.0.0.0/4
       - 127.0.0.1/32
       - 0.0.0.0/32
+
+  nameserver-policy:
+    # 私人域名
+    "*.chenzhenyuan.com": 119.29.29.29
 
 proxy-providers:
   香港机房:
