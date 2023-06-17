@@ -435,6 +435,8 @@ rules:
   - DOMAIN,raw.gitmirror.com,DIRECT
   - DOMAIN,cdn.jsdelivr.net,DIRECT
   - DOMAIN,agit.ai,DIRECT
+  - DOMAIN,ip.istatmenus.app,DIRECT
+  - PROCESS-NAME,iStat Menus Status,DIRECT
 
   # npmjs.org
   - DOMAIN-SUFFIX,npmjs.org,DIRECT
