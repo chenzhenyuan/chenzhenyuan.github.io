@@ -1,4 +1,4 @@
-import{r as fa}from"./react-CFCE4xZu.js";import{s as ca}from"./scheduler-CQEFQj0P.js";var ni={},ao={exports:{}},fe={};/**
+import{r as fa}from"./CFCE4xZu.js";import{s as ca}from"./CQEFQj0P.js";var ni={},ao={exports:{}},fe={};/**
  * @license React
  * react-dom.production.min.js
  *
